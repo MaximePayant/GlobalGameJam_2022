@@ -34,6 +34,7 @@ if [[ ${1} == "-i" ]]; then
     fi
 
     download "JSONParser" "json_parser" "linux" "JSNP"
+    download "SWEngine-Core" "core" "linux" "core"
 fi
 
 if [[ ${1} == "-c" ]]; then

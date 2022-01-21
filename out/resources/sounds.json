@@ -1,0 +1,9 @@
+{
+  "Horn": {
+    "Path": "resources/audio/Horn.wav",
+    "Scene": [
+      "SplashScreen"
+    ],
+    "Type": "Sound"
+  }
+}

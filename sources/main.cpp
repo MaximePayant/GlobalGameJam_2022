@@ -1,31 +1,38 @@
-/**
- * Society: Creative Rift
- * SHIPWRECK ENGINE CORE, 2021
- * Software Engine Project
- *
- * Author:
- * Guillaume S. and Maxime P.
- * File name:
- * main.cpp
- *
- * Description:
- * [Change]
- */
+/*
+** Society: Creative Rift
+** SHIPWRECK ENGINE, 2021
+** Author: Guillaume S.
+** File name: main.cpp
+** Description: [CHANGE]
+*/
 
 #include "SW/Engine.hpp"
+#include "RAY/RayLibModule.hpp"
+#include "Project.hpp"
 
 int main()
+try
 {
+    sw::Speech::setDisplayed(true);
+
+    sw::Engine::createModule<ray::RayLibModule>();
+    sw::CreateScenes();
     sw::Engine::initialize();
     sw::Speech::flush();
-
-    auto& module = sw::Engine::getModule();
-
-    while (module.isOk()) {
+    while (sw::Engine::getModule().isOk())
         sw::Engine::update();
-        sw::Speech::flush();
-    }
+    sw::Speech::flush();
     sw::Engine::terminate();
     sw::Speech::flush();
     return (0);
+}
+catch (sw::Error& error)
+{
+    sw::Speech::Error(error.getMessage(), error.getCode());
+    sw::Speech::flush();
+}
+catch (...)
+{
+    sw::Speech::Error("An unknow error occured ^^'");
+    sw::Speech::flush();
 }

@@ -1,0 +1,17 @@
+{
+  "MissingTexture": {
+    "Path": "resources/textures/missing_texture.png",
+    "Scene": [
+      "SplashScreen",
+      "Main"
+    ],
+    "Type": "Texture"
+  },
+  "Logo": {
+    "Path": "resources/textures/logo.png",
+    "Scene": [
+    "SplashScreen"
+    ],
+  "Type": "Texture"
+  }
+}

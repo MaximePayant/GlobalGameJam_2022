@@ -8,6 +8,6 @@
 #ifndef __JSNP_HPP__
 #define __JSNP_HPP__
 
-#include "includes/Data.hpp"
+#include "Data.hpp"
 
 #endif // __JSNP_HPP__
