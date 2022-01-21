@@ -2,23 +2,25 @@
 ** Society: Creative Rift
 ** SHIPWRECK ENGINE, 2021
 ** Author: Guillaume S.
-** File name: Main.hpp
+** File name: Menu.hpp
 ** Description: [CHANGE]
 */
 
 #include "SW/Scene.hpp"
 
-#ifndef INCARIBUS_MAIN_HPP
-#define INCARIBUS_MAIN_HPP
+#ifndef INCARIBUS_MENU_HPP
+#define INCARIBUS_MENU_HPP
 
-class Main : public sw::AScene {
+class Menu : public sw::AScene {
     public:
         using sw::AScene::AScene;
 
         void onLoad() override;
         void onUpdate() override;
         void onUnload() override;
-        std::string type() const override { return (""); }
+        std::string type() const override { return ("Menu"); }
+
+        void event();
 };
 
-#endif //INCARIBUS_MAIN_HPP
+#endif //INCARIBUS_MENU_HPP
