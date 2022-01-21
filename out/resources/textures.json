@@ -3,7 +3,8 @@
     "Path": "resources/textures/missing_texture.png",
     "Scene": [
       "SplashScreen",
-      "Main"
+      "Main",
+      "GameScene"
     ],
     "Type": "Texture"
   },
@@ -13,5 +14,12 @@
     "SplashScreen"
     ],
   "Type": "Texture"
+  },
+  "ObamaTexture": {
+    "Path": "resources/textures/bomb_icon.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
   }
 }
