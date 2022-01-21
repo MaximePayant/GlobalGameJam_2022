@@ -3,7 +3,7 @@
     "Path": "resources/textures/missing_texture.png",
     "Scene": [
       "SplashScreen",
-      "Main",
+      "Menu",
       "GameScene"
     ],
     "Type": "Texture"
@@ -11,7 +11,7 @@
   "Logo": {
     "Path": "resources/textures/logo.png",
     "Scene": [
-    "SplashScreen"
+      "SplashScreen"
     ],
   "Type": "Texture"
   },

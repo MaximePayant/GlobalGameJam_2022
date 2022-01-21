@@ -2,7 +2,7 @@
   "Verdana": {
     "Path": "resources/fonts/verdana.ttf",
     "Scene": [
-      "Main"
+      "Menu"
     ],
     "Type": "Font"
   }
