@@ -1,3 +1,9 @@
 {
-
+  "Obama": {
+    "Path": "resources/models/BonusBomb.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  }
 }
