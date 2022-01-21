@@ -9,11 +9,11 @@
 #include "SW/Engine.hpp"
 #include "Project.hpp"
 
-#include "scenes/Main.hpp"
+#include "scenes/Menu.hpp"
 #include "scenes/SplashScreen.hpp"
 
 void sw::CreateScenes()
 {
     sw::Engine::createScene<SplashScreen>(std::string("SplashScreen"));
-    sw::Engine::createScene<Main>(std::string("Main"));
+    sw::Engine::createScene<Menu>(std::string("Menu"));
 }

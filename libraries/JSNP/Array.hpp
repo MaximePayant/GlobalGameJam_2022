@@ -28,7 +28,9 @@ namespace jsnp
             ~Array() = default;
 
             std::list<Value>::const_iterator begin() const noexcept { return (m_values.begin()); }
+            std::list<Value>::iterator begin() noexcept { return (m_values.begin()); }
             std::list<Value>::const_iterator end() const noexcept { return (m_values.end()); }
+            std::list<Value>::iterator end() noexcept { return (m_values.end()); }
 
             template <typename T>
             T& emplace_front(T value);
