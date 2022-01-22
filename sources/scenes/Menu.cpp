@@ -27,7 +27,7 @@ void Menu::onLoad()
     createManager<ray::TransformManager>("TransformManager");
     //createManager<ray::MeshManager>("Mesh_Manager");
     auto& scriptFact = createManager<sw::AScriptFact>("ScriptManager");
-    
+
     m_eventManager.create("Mouse_LeftClick_Pressed");
     m_eventManager.create("Mouse_RightClick_Pressed");
     m_eventManager.create("Mouse_LeftClick_Released");
