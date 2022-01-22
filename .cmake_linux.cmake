@@ -21,6 +21,8 @@ set( EXT cpp )
 ## SOURCE FOLDERS
 set( SRC_FOLDERS
         ${CMAKE_SOURCE_DIR}/sources/
+        ${CMAKE_SOURCE_DIR}/sources/components/
+        ${CMAKE_SOURCE_DIR}/sources/managers/
         ${CMAKE_SOURCE_DIR}/sources/scenes/
         ${CMAKE_SOURCE_DIR}/sources/script/
         ${CMAKE_SOURCE_DIR}/sources/script/SplashScreen/
@@ -31,6 +33,8 @@ set( INC_FOLDERS
         ${CMAKE_SOURCE_DIR}/libraries/
         ${CMAKE_SOURCE_DIR}/libraries/core/
         ${CMAKE_SOURCE_DIR}/includes/
+        ${CMAKE_SOURCE_DIR}/includes/components/
+        ${CMAKE_SOURCE_DIR}/includes/managers/
         ${CMAKE_SOURCE_DIR}/includes/scenes/
         ${CMAKE_SOURCE_DIR}/includes/script/
         ${CMAKE_SOURCE_DIR}/includes/script/SplashScreen/

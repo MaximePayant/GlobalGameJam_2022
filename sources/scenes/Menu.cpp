@@ -46,11 +46,11 @@ void Menu::event()
     updateMousePosition(mpos);
     if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Pressed", info);
-    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_RIGHT))
-        m_eventManager.drop("Mouse_RightClick_Pressed", info);
-    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT))
+    else if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Released");
     if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_RIGHT))
+        m_eventManager.drop("Mouse_RightClick_Pressed", info);
+    else if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_RIGHT))
         m_eventManager.drop("Mouse_RightClick_Released");
 }
 
