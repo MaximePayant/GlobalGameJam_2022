@@ -39,6 +39,7 @@ namespace ray
             Mesh& setAnimation(std::string path);
             Mesh& setAnimCount(int count);
             Mesh& increaseAnimCount();
+            Mesh& setShaders(Shader shader, int index);
 
             [[nodiscard]] Model getModel() const;
             [[nodiscard]] RColor getColor() const;

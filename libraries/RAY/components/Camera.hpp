@@ -43,6 +43,7 @@ namespace ray
             [[nodiscard]]float getFOV() const;
             [[nodiscard]]ray::Vector3<float> getUp() const;
             [[nodiscard]]ray::Vector3<float> getTarget() const;
+            [[nodiscard]]ray::Vector3<float> getPosition() const;
             [[nodiscard]]Camera *getCamera();
             [[nodiscard]] std::string type() const override;
     };
