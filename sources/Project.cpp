@@ -16,6 +16,6 @@
 void sw::CreateScenes()
 {
     sw::Engine::createScene<SplashScreen>(std::string("SplashScreen"));
-    sw::Engine::createScene<Menu>(std::string("Menu"));
     sw::Engine::createScene<GameScene>(std::string("GameScene"));
+    sw::Engine::createScene<Menu>(std::string("Menu"));
 }

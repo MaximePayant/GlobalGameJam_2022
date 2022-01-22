@@ -114,7 +114,7 @@ float RectangleShape::getRoundness() const
     return (m_roundness);
 }
 
-void RectangleShape::draw()
+void RectangleShape::draw() const
 {
     static sw::Reference<ray::Transform> tfm;
 
@@ -142,5 +142,5 @@ void RectangleShape::draw()
         DrawRectangle(pos.x, pos.y, size.x, size.y, m_fillColor.getColor());
 
     if (m_outlineThickness)
-        DrawRectangleLines(pos.x, pos.y, size.x, size.y, m_fillColor.getColor());
+        DrawRectangleLinesEx(Rectangle{pos.x, pos.y, size.x, size.y}, m_outlineThickness, m_outlineColor.getColor());
 }
