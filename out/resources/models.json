@@ -1,6 +1,13 @@
 {
   "Obama": {
-    "Path": "resources/models/Bureau.obj",
+    "Path": "resources/models/BonusBomb.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Prison": {
+    "Path": "resources/models/Prison.obj",
     "Scene": [
       "GameScene"
     ],

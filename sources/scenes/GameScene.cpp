@@ -10,6 +10,8 @@
 #include "RAY/components/components.hpp"
 #include "RAY/components_manager/managers.hpp"
 #include "script/GameScene/Obama.hpp"
+#include "script/GameScene/MainMusic.hpp"
+#include "script/GameScene/LoopMusic.hpp"
 
 #include "RectMouseCollider.hpp"
 #include "RectMCManager.hpp"
@@ -28,6 +30,9 @@ void GameScene::onLoad()
     createManager<ray::MeshManager>("MeshManager");
     auto& scriptFact = createManager<sw::AScriptFact>("ScriptManager");
     createManager<ray::CameraManager>("CameraManager");
+    createManager<ray::MusicManager>("MusicManager");
+    createManager<ray::AudioManager>("AudioManager");
+    createManager<ray::SpriteManager>("SpriteManager");
 
     m_eventManager.create("Mouse_LeftClick_Pressed");
     m_eventManager.create("Mouse_RightClick_Pressed");
@@ -37,9 +42,16 @@ void GameScene::onLoad()
     eventManager().create("Update");
     auto& obama = createEntity("Obama");
     auto& camera = createEntity("MainCamera");
+    auto& music = createEntity("MusicManager");
+    auto& loop = createEntity("MusicLoop");
 
+    setLayer("MeshManager", 0);
+    setLayer("SpriteManager", 1);
+
+    music.createComponent<MainMusic>("ScriptManager");
+    loop.createComponent<LoopMusic>("ScriptManager");
     obama.createComponent<Obama>("ScriptManager");
-    camera.createComponent<ray::RCamera>("CameraManager");
+    camera.createComponent<ray::RCamera>("CameraManager").setTarget(21.5, 0, -25).setPosition(21.5, 17, -25).setUp(8, 1, 0);
 
     // createManager<RectMCManager>("RectMCManager").isDebuging = true;
     // auto& mc = createEntity("MouseCollider");

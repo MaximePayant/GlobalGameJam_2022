@@ -20,7 +20,7 @@
 #include "RAY/utils/Input.hpp"
 #include "RectangleShape.hpp"
 
-#include "raylib.h"
+#include "RAYLIB/raylib.h"
 
 class RectMouseCollider
     :   public sw::Component

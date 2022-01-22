@@ -5,5 +5,40 @@
       "SplashScreen"
     ],
     "Type": "Sound"
+  },
+  "Bass Suspens": {
+    "Path": "resources/audio/Musique/Bass Suspens.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Music"
+  },
+  "Bass Stress": {
+    "Path": "resources/audio/Musique/Loop_Bass Stress.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Ponctuation 1": {
+    "Path": "resources/audio/Musique/Ponctuation 1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Ponctuation 2": {
+    "Path": "resources/audio/Musique/Ponctuation 2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Ponctuation 3": {
+    "Path": "resources/audio/Musique/Ponctuation 3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
   }
 }
