@@ -22,8 +22,8 @@ void Obama::start()
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
 
-    model.setModel("Obama");
-    model.setTexture("ObamaTexture");
+    model.setModel("Desk");
+    //model.setTexture("ObamaTexture");
 }
 
 void Obama::update()

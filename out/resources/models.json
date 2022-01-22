@@ -1,5 +1,12 @@
 {
   "Obama": {
+    "Path": "resources/models/BonusBomb.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Desk": {
     "Path": "resources/models/Bureau.obj",
     "Scene": [
       "GameScene"
