@@ -10,6 +10,7 @@
 #include "RAY/components/components.hpp"
 #include "RAY/components_manager/managers.hpp"
 #include "script/GameScene/Obama.hpp"
+#include "script/GameScene/MainMusic.hpp"
 
 void GameScene::onLoad()
 {
@@ -17,12 +18,15 @@ void GameScene::onLoad()
     createManager<ray::MeshManager>("MeshManager");
     auto& scriptFact = createManager<sw::AScriptFact>("ScriptManager");
     createManager<ray::CameraManager>("CameraManager");
+    createManager<ray::MusicManager>("MusicManager");
 
     eventManager().create("Start");
     eventManager().create("Update");
     auto& obama = createEntity("Obama");
     auto& camera = createEntity("MainCamera");
+    auto& music = createEntity("MusicManager");
 
+    music.createComponent<MainMusic>("MusicManager");
     obama.createComponent<Obama>("ScriptManager");
     camera.createComponent<ray::RCamera>("CameraManager");
 
