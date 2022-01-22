@@ -57,7 +57,7 @@ class RectangleShape
         void setRoundness(float roundness);
         float getRoundness() const;
 
-        void draw();
+        void draw() const;
 
         std::string type() const override { return ("RectangleShape"); }
 

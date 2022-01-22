@@ -19,6 +19,8 @@ class GameScene : public sw::AScene
         void onUpdate() override;
         void onUnload() override;
         [[nodiscard]] std::string type() const override;
+
+        void event();
 };
 
 #endif //BOMBERSHIP_GAMESCENE_HPP
