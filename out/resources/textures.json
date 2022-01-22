@@ -21,5 +21,182 @@
       "GameScene"
     ],
     "Type": "Texture"
+  },
+  "PrisonVivant1": {
+    "Path": "resources/textures/all/all_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant2": {
+  "Path": "resources/textures/lambert/lambert2_Base_color.png",
+  "Scene": [
+    "GameScene"
+  ],
+  "Type": "Texture"
+  },
+  "PrisonVivant3": {
+    "Path": "resources/textures/mur/mur_sol_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant1Metallic": {
+    "Path": "resources/textures/all/all_Metallic.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant2Metallic": {
+    "Path": "resources/textures/lambert/lambert2_Metallic.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant3Metallic": {
+    "Path": "resources/textures/mur/mur_sol_Metallic.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant1Normal": {
+    "Path": "resources/textures/all/all_Normal_OpenGL.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant2Normal": {
+    "Path": "resources/textures/lambert/lambert2_Normal_OpenGL.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant3Normal": {
+    "Path": "resources/textures/mur/mur_sol_Normal_OpenGL.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant1Roughness": {
+    "Path": "resources/textures/all/all_Roughness.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant2Roughness": {
+    "Path": "resources/textures/lambert/lambert2_Roughness.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonVivant3Roughness": {
+    "Path": "resources/textures/mur/mur_sol_Roughness.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+
+
+  "PrisonMort1": {
+    "Path": "resources/textures/all/mort/all_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort2": {
+    "Path": "resources/textures/lambert/mort/lambert2_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort3": {
+    "Path": "resources/textures/mur/mort/mur_sol_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort1Metallic": {
+    "Path": "resources/textures/all/mort/all_Metallic.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort2Metallic": {
+    "Path": "resources/textures/lambert/mort/lambert2_Metallic.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort3Metallic": {
+    "Path": "resources/textures/mur/mort/mur_sol_Metallic.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort1Normal": {
+    "Path": "resources/textures/all/mort/all_Normal_OpenGL.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort2Normal": {
+    "Path": "resources/textures/lambert/mort/lambert2_Normal_OpenGL.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort3Normal": {
+    "Path": "resources/textures/mur/mort/mur_sol_Normal_OpenGL.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort1Roughness": {
+    "Path": "resources/textures/all/mort/all_Roughness.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort2Roughness": {
+    "Path": "resources/textures/lambert/mort/lambert2_Roughness.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PrisonMort3Roughness": {
+    "Path": "resources/textures/mur/mort/mur_sol_Roughness.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "BlackScreen": {
+    "Path": "resources/textures/EcranNoir.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
   }
 }

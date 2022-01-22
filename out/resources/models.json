@@ -6,8 +6,8 @@
     ],
     "Type": "Model"
   },
-  "Desk": {
-    "Path": "resources/models/Bureau.obj",
+  "Prison": {
+    "Path": "resources/models/Prison.obj",
     "Scene": [
       "GameScene"
     ],

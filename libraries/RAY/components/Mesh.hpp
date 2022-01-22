@@ -32,7 +32,10 @@ namespace ray
             Mesh& setModel(std::string modelName);
             Mesh& setColor(Color color);
             Mesh& setColor(int r, int g, int b, int a);
-            Mesh& setTexture(std::string textureName);
+            Mesh& setTexture(std::string textureName, int index);
+            Mesh& setTextureNormal(std::string textureName, int index);
+            Mesh& setTextureRoughness(std::string textureName, int index);
+            Mesh& setTextureMetallic(std::string textureName, int index);
             Mesh& setAnimation(std::string path);
             Mesh& setAnimCount(int count);
             Mesh& increaseAnimCount();

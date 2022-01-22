@@ -27,6 +27,8 @@ set( SRC_FOLDERS
         ${CMAKE_SOURCE_DIR}/sources/script/
         ${CMAKE_SOURCE_DIR}/sources/script/SplashScreen/
         ${CMAKE_SOURCE_DIR}/sources/script/GameScene/
+        ${CMAKE_SOURCE_DIR}/sources/script/components/
+        ${CMAKE_SOURCE_DIR}/sources/script/managers/
         )
 ## INCLUDE FOLDERS
 set( INC_FOLDERS
@@ -39,6 +41,8 @@ set( INC_FOLDERS
         ${CMAKE_SOURCE_DIR}/includes/script/
         ${CMAKE_SOURCE_DIR}/includes/script/SplashScreen/
         ${CMAKE_SOURCE_DIR}/includes/script/GameScene/
+        ${CMAKE_SOURCE_DIR}/includes/components/
+        ${CMAKE_SOURCE_DIR}/includes/managers/
         )
 ## IMPORTED SHARED LIBRARY NAME
 set( SHARED_LIB_NAME
