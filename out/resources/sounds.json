@@ -6,4 +6,39 @@
     ],
     "Type": "Sound"
   }
+  "Bass Suspens": {
+    "Path": "resources/audio/Musique/Bass Suspens.wav",
+    "Scene": [
+      "SplashScreen"
+    ],
+    "Type": "Musique"
+  }
+  "Bass Stress": {
+    "Path": "resources/audio/Musique/Loop_Bass Stress.wav",
+    "Scene": [
+      "SplashScreen"
+    ],
+    "Type": "Musique"
+  }
+  "Ponctuation 1": {
+    "Path": "resources/audio/Musique/Ponctuation 1.wav",
+    "Scene": [
+      "SplashScreen"
+    ],
+    "Type": "Musique"
+  }
+  "Ponctuation 2": {
+    "Path": "resources/audio/Musique/Ponctuation 2.wav",
+    "Scene": [
+      "SplashScreen"
+    ],
+    "Type": "Musique"
+  }
+  "Ponctuation 3": {
+    "Path": "resources/audio/Musique/Ponctuation 3.wav",
+    "Scene": [
+      "SplashScreen"
+    ],
+    "Type": "Musique"
+  }
 }
