@@ -6,20 +6,20 @@
 ** Description: [CHANGE]
 */
 
-#ifndef GGJ_2022_MAINMUSIC_HPP
-#define GGJ_2022_MAINMUSIC_HPP
+#ifndef GGJ_2022_LoopMusic_HPP
+#define GGJ_2022_LoopMusic_HPP
 
 #include "SW/Component.hpp"
 #include "SW/Utils.hpp"
 
-class MainMusic: public sw::Component
+class LoopMusic: public sw::Component
 {
     private:
         sw::Chrono m_time;
         int m_nextPonct;
     public:
-        explicit MainMusic(sw::Entity& entity);
-        ~MainMusic() override = default;
+        explicit LoopMusic(sw::Entity& entity);
+        ~LoopMusic() override = default;
 
         [[nodiscard]] std::string type() const override;
 
@@ -27,4 +27,4 @@ class MainMusic: public sw::Component
         void update();
 };
 
-#endif //GGJ_2022_MAINMUSIC_HPP
+#endif //GGJ_2022_LoopMusic_HPP

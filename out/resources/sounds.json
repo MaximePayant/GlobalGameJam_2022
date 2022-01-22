@@ -18,27 +18,27 @@
     "Scene": [
       "GameScene"
     ],
-    "Type": "Music"
+    "Type": "Sound"
   },
   "Ponctuation 1": {
     "Path": "resources/audio/Musique/Ponctuation 1.wav",
     "Scene": [
       "GameScene"
     ],
-    "Type": "Music"
+    "Type": "Sound"
   },
   "Ponctuation 2": {
     "Path": "resources/audio/Musique/Ponctuation 2.wav",
     "Scene": [
       "GameScene"
     ],
-    "Type": "Music"
+    "Type": "Sound"
   },
   "Ponctuation 3": {
     "Path": "resources/audio/Musique/Ponctuation 3.wav",
     "Scene": [
       "GameScene"
     ],
-    "Type": "Music"
+    "Type": "Sound"
   }
 }
