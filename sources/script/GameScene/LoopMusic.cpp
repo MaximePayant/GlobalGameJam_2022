@@ -13,7 +13,7 @@
 LoopMusic::LoopMusic(sw::Entity &entity) :
 sw::Component(entity),
 m_time(sw::Chrono::Wait),
-m_nextPonct(2)
+m_nextPonct(120)
 {
     m_entity.scene().eventManager()["Start"].subscribe(this, &LoopMusic::start);
     m_entity.scene().eventManager()["Update"].subscribe(this, &LoopMusic::update);

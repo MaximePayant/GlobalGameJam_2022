@@ -13,7 +13,7 @@
 MainMusic::MainMusic(sw::Entity &entity) :
 sw::Component(entity),
 m_time(sw::Chrono::Wait),
-m_nextPonct((std::rand() % 30))
+m_nextPonct((std::rand() % 30) + 50)
 {
     m_entity.scene().eventManager()["Start"].subscribe(this, &MainMusic::start);
     m_entity.scene().eventManager()["Update"].subscribe(this, &MainMusic::update);
