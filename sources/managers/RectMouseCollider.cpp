@@ -33,13 +33,19 @@ void RectMCManager::onUpdate()
                 rshape->startClock();
             }
 
-            // if (rshape->clock() > 0.5 && rshape->state() != RectMouseCollider::Hover) {
-            //     if (rshape->state() == RectMouseCollider::Lclick)
-            //         rshape->onLeftRelease();
-            //     if (rshape->state() == RectMouseCollider::Rclick)
-            //         rshape->onRightRelease();
-            //     rshape->state(RectMouseCollider::Hover);
-            // }
+            if (rshape->clock() > 1
+            && rshape->state() != RectMouseCollider::Hover) {
+                if (rshape->state() == RectMouseCollider::Lclick
+                && ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT)) {
+                    rshape->onLeftRelease();
+                    rshape->state(RectMouseCollider::Hover);
+                }
+                if (rshape->state() == RectMouseCollider::Rclick
+                && ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_RIGHT)) {
+                    rshape->onRightRelease();
+                    rshape->state(RectMouseCollider::Hover);
+                }
+            }
         }
         else if (rshape->state() != RectMouseCollider::None) {
             rshape->onNormal();

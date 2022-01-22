@@ -39,10 +39,12 @@ class Button
         void onLeftRelease() override
         {
             sw::Speech::Debug("Left Release");
+            m_shape.setOutlineColor(ray::Blue);
         }
         void onRightRelease() override
         {
             sw::Speech::Debug("Right Release");
+            m_shape.setOutlineColor(ray::Blue);
         }
 
         void onHover() override
