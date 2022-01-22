@@ -13,8 +13,13 @@
 
 #include "RectMouseCollider.hpp"
 #include "RectMCManager.hpp"
+
+#include "ObjCollider.hpp"
+#include "ObjColliderManager.hpp"
+
 #include "RectangleShapeManager.hpp"
 #include "ButtonTest.hpp"
+
 #include "EventInfo/MousePosition.hpp"
 
 void GameScene::onLoad()
@@ -36,9 +41,13 @@ void GameScene::onLoad()
     obama.createComponent<Obama>("ScriptManager");
     camera.createComponent<ray::RCamera>("CameraManager");
 
-    createManager<RectMCManager>("RectMCManager").isDebuging = true;
-    auto& mc = createEntity("MouseCollider");
-    mc.createComponent<Button>("RectMCManager", sw::Vector2f{0, 0}, sw::Vector2f{100, 50});
+    // createManager<RectMCManager>("RectMCManager").isDebuging = true;
+    // auto& mc = createEntity("MouseCollider");
+    // mc.createComponent<Button>("RectMCManager", sw::Vector2f{0, 0}, sw::Vector2f{100, 50});
+
+    createManager<ObjColliderManager>("ObjColliderManager").isDebuging = true;
+    auto& oc = createEntity("ObjCollider");
+    oc.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, 0}, Vector3{100, 100, 100});
 
     eventManager().drop("Start");
 }
@@ -57,15 +66,12 @@ void GameScene::event()
     static sw::EventInfo info{mpos};
 
     updateMousePosition(mpos);
-    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT)) {
-        sw::Speech::Debug("LEFT CLICK !!!!!");
+    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Pressed", info);
-    }
     else if (ray::Input::IsMouseButtonReleased(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Released");
 
     if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_RIGHT)) {
-        sw::Speech::Debug("RIGHT CLICK !!!!!");
         m_eventManager.drop("Mouse_RightClick_Pressed", info);
     }
     else if (ray::Input::IsMouseButtonReleased(ray::Mouse::MOUSE_BUTTON_RIGHT))
