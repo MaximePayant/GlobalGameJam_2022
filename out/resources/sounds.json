@@ -363,4 +363,18 @@
     ],
     "Type": "Sound"
   },
+  "Wooden Box": {
+    "Path": "resources/audio/Props/Wooden_Box_Open.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Exterior Amb": {
+    "Path": "resources/audio/Amb/Loop_Exterior.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
 }
