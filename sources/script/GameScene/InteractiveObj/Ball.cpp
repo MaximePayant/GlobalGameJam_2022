@@ -28,11 +28,25 @@ void Ball::start()
 {
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
-    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, -2}, Vector3{100, 100, 1}).setActive(false);
+    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{930, 340, 0}, Vector3{20, 20, 1}).setActive(false);
 
+    model.setActive(false);
     model.setModel("Ball");
     model.setTexture("BallBase", 0);
 }
 
 void Ball::update()
 {}
+
+void Ball::interact()
+{
+
+}
+
+void Ball::take()
+{
+    if (m_state == InteractiveObj::Placed)
+        m_state = InteractiveObj::Taked;
+    else if (m_state == InteractiveObj::Taked)
+        m_state = InteractiveObj::Placed;
+}

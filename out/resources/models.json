@@ -120,5 +120,12 @@
       "GameScene"
     ],
     "Type": "Model"
+  },
+  "Pillow": {
+    "Path": "resources/models/interactive_obj/coussin.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
   }
 }
