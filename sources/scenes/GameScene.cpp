@@ -65,9 +65,9 @@ void GameScene::onLoad()
     m_eventManager.create("ChangeWorld");
     eventManager().create("Start");
     eventManager().create("Update");
-
     eventManager().create("ShowText");
     eventManager().create("HideText");
+
     auto& obama = createEntity("Obama");
     auto& camera = createEntity("MainCamera");
     auto& music = createEntity("MusicManager");
@@ -119,10 +119,6 @@ void GameScene::onLoad()
     obama.createComponent<Obama>("ScriptManager");
     camera.createComponent<ray::RCamera>("CameraManager").setTarget(21.5, 0, -25).setPosition(21.5, 17, -25).setUp(8, 1, 0);
 
-    //createManager<RectMCManager>("RectMCManager").isDebuging = true;
-    //auto& mc = createEntity("MouseCollider");
-    //mc.createComponent<Button>("RectMCManager", sw::Vector2f{0, 0}, sw::Vector2f{100, 50});
-
     eventManager().drop("Start");
 }
 
@@ -140,8 +136,10 @@ void GameScene::event()
     static sw::EventInfo info{mpos};
 
     updateMousePosition(mpos);
-    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT))
+    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT)) {
         m_eventManager.drop("Mouse_LeftClick_Pressed", info);
+        m_eventManager.drop("HideText");
+    }
     else if (ray::Input::IsMouseButtonReleased(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Released");
 

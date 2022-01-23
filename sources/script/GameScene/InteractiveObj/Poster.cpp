@@ -28,7 +28,7 @@ void Poster::start()
 {
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
-    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, -2}, Vector3{100, 100, 1}).setActive(false);
+    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{570, 850, 0}, Vector3{200, 100, 1});
 
     model.setModel("Poster");
     model.setTexture("PrisonVivant1", 0);
@@ -36,3 +36,13 @@ void Poster::start()
 
 void Poster::update()
 {}
+
+void Poster::interact()
+{
+    m_entity.getComponent<ray::Mesh>("MeshManager").setActive(false);
+    m_entity.getComponent<ObjCollider>("ObjColliderManager").setActive(false);
+
+    auto& ac = m_entity.scene().getEntity("ObjBox");
+    ac.getComponent<ray::Mesh>("MeshManager").setActive(true);
+    ac.getComponent<ObjCollider>("ObjColliderManager").setActive(true);
+}

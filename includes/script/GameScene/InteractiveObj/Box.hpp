@@ -31,8 +31,7 @@ class Box
         void start();
         void update();
 
-        void take() override {};
-        void interact() override {};
+        void interact() override;
 
 };
 

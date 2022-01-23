@@ -28,11 +28,14 @@ void Box::start()
 {
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
-    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, -2}, Vector3{100, 100, 1}).setActive(false);
+    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{500, 700, 0}, Vector3{70, 70, 1}).setActive(false);
 
     model.setModel("Box");
     model.setTexture("BoxBase", 0);
 }
 
 void Box::update()
+{}
+
+void Box::interact()
 {}
