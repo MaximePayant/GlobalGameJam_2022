@@ -16,6 +16,7 @@ class MainChar: public sw::Component
     private:
         Shader m_shader;
         float* foo;
+        bool m_mdm;
     public:
         explicit MainChar(sw::Entity& entity);
         ~MainChar() override = default;
@@ -24,6 +25,7 @@ class MainChar: public sw::Component
 
         void start();
         void update();
+        void changeWorld();
 };
 
 #endif //GGJ_2022_MAINCHAR_HPP

@@ -28,6 +28,8 @@ void TextDisplay::start()
     auto &text = m_entity.createComponent<ray::Text>("TextManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
     auto& box = m_entity.scene().createEntity("TextBox");
+    static ShowText showText("Intro-Player");
+    static sw::EventInfo info(showText);
 
     text.setString("");
     text.setSpacing(5.0f);
@@ -36,6 +38,7 @@ void TextDisplay::start()
     text.setSize(30);
     transform.setPosition(150, 900);
     box.createComponent<TextBox>("ScriptManager").start();
+    m_entity.scene().eventManager().drop("ShowText", info);
 }
 
 void TextDisplay::update()

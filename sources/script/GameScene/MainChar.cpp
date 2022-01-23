@@ -9,12 +9,15 @@
 #include "RAY/components/components.hpp"
 
 #include "script/GameScene/Mainchar.hpp"
+#include "EventInfo/ShowText.hpp"
 
 MainChar::MainChar(sw::Entity &entity) :
-sw::Component(entity)
+sw::Component(entity),
+m_mdm(false)
 {
     m_entity.scene().eventManager()["Start"].subscribe(this, &MainChar::start);
     m_entity.scene().eventManager()["Update"].subscribe(this, &MainChar::update);
+    m_entity.scene().eventManager()["ChangeWorld"].subscribe(this, &MainChar::changeWorld);
 }
 
 void MainChar::start()
@@ -50,4 +53,15 @@ void MainChar::update()
 std::string MainChar::type() const
 {
 return ("MainChar");
+}
+
+void MainChar::changeWorld()
+{
+    if (!m_mdm) {
+        static ShowText showText("Intro-Player");
+        static sw::EventInfo info(showText);
+
+        m_entity.scene().eventManager().drop("ShowText", info);
+        m_mdm = true;
+    }
 }

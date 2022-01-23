@@ -151,9 +151,6 @@ void GameScene::event()
 
 void GameScene::onUpdate()
 {
-    static ShowText showText("Intro-Player");
-    static sw::EventInfo info(showText);
-
     event();
     for (auto& [_, managerName] : m_managerLayer) {
         auto& sys = m_managerMap[managerName];
@@ -161,9 +158,7 @@ void GameScene::onUpdate()
             continue;
         sys->update();
     }
-    if (ray::Input::GetKeyReleased(ray::KEY_B))
-        eventManager().drop("ShowText", info);
-    if (ray::Input::GetKeyReleased(ray::KEY_N))
+    if (ray::Input::GetKeyReleased(ray::KEY_SPACE))
         eventManager().drop("HideText");
 }
 
