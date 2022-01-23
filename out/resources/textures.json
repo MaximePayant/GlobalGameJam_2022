@@ -219,5 +219,12 @@
       "GameScene"
     ],
     "Type": "Texture"
+  },
+  "DialogueBox": {
+    "Path": "resources/textures/boite_dialogue.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
   }
 }

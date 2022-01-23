@@ -2,18 +2,18 @@
 ** Society: Creative Rift
 ** SHIPWRECK ENGINE, 2022
 ** Author: Guillaume S.
-** File name: TextDisplay.hpp
+** File name: TextBox.hpp
 ** Description: [CHANGE]
 */
 
-#ifndef GGJ_2022_TEXTDISPLAY_HPP
-#define GGJ_2022_TEXTDISPLAY_HPP
+#ifndef GGJ_2022_TEXTBOX_HPP
+#define GGJ_2022_TEXTBOX_HPP
 
 #include "SW/Component.hpp"
 #include "SW/Event.hpp"
 #include "SW/Utils.hpp"
 
-class TextDisplay: public sw::Component
+class TextBox: public sw::Component
 {
     private:
         enum {
@@ -25,8 +25,8 @@ class TextDisplay: public sw::Component
         unsigned int m_nbr;
 
     public:
-        explicit TextDisplay(sw::Entity& entity);
-        ~TextDisplay() override = default;
+        explicit TextBox(sw::Entity& entity);
+        ~TextBox() override = default;
 
         [[nodiscard]] std::string type() const override;
 
@@ -36,4 +36,4 @@ class TextDisplay: public sw::Component
         void hideText();
 };
 
-#endif //GGJ_2022_TEXTDISPLAY_HPP
+#endif //GGJ_2022_TEXTBOX_HPP

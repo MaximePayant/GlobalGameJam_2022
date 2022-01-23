@@ -12,7 +12,6 @@
 #include "script/GameScene/Obama.hpp"
 #include "script/GameScene/MainMusic.hpp"
 #include "script/GameScene/LoopMusic.hpp"
-#include "script/GameScene/MainMusic.hpp"
 #include "script/GameScene/Ghost1.hpp"
 #include "script/GameScene/Ghost2.hpp"
 #include "script/GameScene/TextDisplay.hpp"
@@ -22,6 +21,7 @@
 #include "RectangleShapeManager.hpp"
 #include "ButtonTest.hpp"
 #include "EventInfo/MousePosition.hpp"
+#include "EventInfo/ShowText.hpp"
 #include "Mainchar.hpp"
 
 void GameScene::onLoad()
@@ -42,6 +42,8 @@ void GameScene::onLoad()
     m_eventManager.create("Mouse_RightClick_Released");
     eventManager().create("Start");
     eventManager().create("Update");
+    eventManager().create("ShowText");
+    eventManager().create("HideText");
     auto& obama = createEntity("Obama");
     auto& camera = createEntity("MainCamera");
     auto& music = createEntity("MusicManager");
@@ -98,6 +100,9 @@ void GameScene::event()
 
 void GameScene::onUpdate()
 {
+    static ShowText showText("Intro-Player");
+    static sw::EventInfo info(showText);
+
     event();
     for (auto& [_, managerName] : m_managerLayer) {
         auto& sys = m_managerMap[managerName];
@@ -105,6 +110,10 @@ void GameScene::onUpdate()
             continue;
         sys->update();
     }
+    if (ray::Input::GetKeyReleased(ray::KEY_B))
+        eventManager().drop("ShowText", info);
+    if (ray::Input::GetKeyReleased(ray::KEY_N))
+        eventManager().drop("HideText");
 }
 
 void GameScene::onUnload()
