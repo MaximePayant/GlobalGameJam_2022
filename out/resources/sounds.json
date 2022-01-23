@@ -356,4 +356,11 @@
     ],
     "Type": "Sound"
   },
+  "Take Other": {
+    "Path": "resources/audio/Props/Take Other.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
 }
