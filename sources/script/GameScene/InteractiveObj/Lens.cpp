@@ -28,12 +28,13 @@ void Lens::start()
 {
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
-    auto& mc = m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{590, 530, -2}, Vector3{50, 50, 100});
+    auto& mc = m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{590, 530, -2}, Vector3{50, 50, 1});
 
-    mc.setActive(true);
+    mc.setActive(false);
+    model.setActive(false);
     model.setModel("Lens");
     model.setTexture("LensBase", 0);
-    transform.setPosition({1.2, 0, 1.1});
+    transform.setPosition({1.2, -0.2, 1.1});
 }
 
 void Lens::update()
@@ -41,9 +42,8 @@ void Lens::update()
 
 void Lens::take()
 {
-    auto &model = m_entity.getComponent<ray::Mesh>("MeshManager");
     if (m_state == InteractiveObj::Placed)
-        model.setColor(Color{255, 255, 255, 0});
-    if (m_state == InteractiveObj::Taked)
-        model.setColor(Color{0, 0, 0, 255});
+        m_state = InteractiveObj::Taked;
+    else if (m_state == InteractiveObj::Taked)
+        m_state = InteractiveObj::Placed;
 }

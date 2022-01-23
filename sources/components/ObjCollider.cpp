@@ -38,7 +38,9 @@ ObjCollider::ObjCollider(sw::Entity& entity, const Vector3& size)
 {
     auto& emanager = entity.scene().eventManager();
     emanager["Mouse_LeftClick_Pressed"].subscribe(this, &ObjCollider::leftClickPressed_Event);
+    emanager["Mouse_RightClick_Pressed"].subscribe(this, &ObjCollider::rightClickPressed_Event);
     emanager["Mouse_LeftClick_Released"].subscribe(this, &ObjCollider::leftClickReleased_Event);
+    emanager["Mouse_RightClick_Released"].subscribe(this, &ObjCollider::rightClickReleased_Event);
 }
 
 ObjCollider::ObjCollider(sw::Entity& entity, const Vector3& origin, const Vector3& size)
@@ -48,7 +50,9 @@ ObjCollider::ObjCollider(sw::Entity& entity, const Vector3& origin, const Vector
 {
     auto& emanager = entity.scene().eventManager();
     emanager["Mouse_LeftClick_Pressed"].subscribe(this, &ObjCollider::leftClickPressed_Event);
+    emanager["Mouse_RightClick_Pressed"].subscribe(this, &ObjCollider::rightClickPressed_Event);
     emanager["Mouse_LeftClick_Released"].subscribe(this, &ObjCollider::leftClickReleased_Event);
+    emanager["Mouse_RightClick_Released"].subscribe(this, &ObjCollider::rightClickReleased_Event);
 }
 
 void ObjCollider::leftClickPressed_Event(sw::EventInfo& info)

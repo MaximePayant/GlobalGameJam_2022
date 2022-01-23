@@ -28,11 +28,18 @@ void AlarmClock::start()
 {
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
-    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, 0}, Vector3{100, 100, 100}).setActive(false);
+    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{1255, 605, -10}, Vector3{50, 50, 1}).setActive(false);
 
     model.setModel("AlarmClock");
     model.setTexture("AlarmClockBase", 0);
+    model.setActive(false);
+    transform.setPosition({-1.1, 0, 9.2});
 }
 
 void AlarmClock::update()
 {}
+
+void AlarmClock::interact()
+{
+    m_entity.scene().eventManager().drop("ChangeWorld");
+}

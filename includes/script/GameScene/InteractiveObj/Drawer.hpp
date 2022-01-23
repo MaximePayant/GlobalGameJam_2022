@@ -31,7 +31,7 @@ class Drawer
         void start();
         void update();
 
-        void interact() override {};
+        void interact() override;
 
 };
 

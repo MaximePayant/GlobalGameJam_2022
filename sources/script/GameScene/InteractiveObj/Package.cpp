@@ -28,7 +28,7 @@ void Package::start()
 {
     auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
-    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, 0}, Vector3{100, 100, 100}).setActive(false);
+    m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{1240, 590, 0}, Vector3{90, 90, 1});
 
     model.setModel("Package");
     model.setTexture("PackBase", 0);
@@ -36,3 +36,12 @@ void Package::start()
 
 void Package::update()
 {}
+
+void Package::interact()
+{
+    m_entity.getComponent<ray::Mesh>("MeshManager").setActive(false);
+
+    auto& ac = m_entity.scene().getEntity("ObjAlarmClock");
+    ac.getComponent<ray::Mesh>("MeshManager").setActive(true);
+    ac.getComponent<ObjCollider>("ObjColliderManager").setActive(true);
+}

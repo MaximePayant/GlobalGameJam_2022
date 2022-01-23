@@ -21,13 +21,14 @@ class InteractiveObj
     :   public sw::Component
 {
 
-    protected:
+    public:
         enum State {
             Placed,
-            Taked
+            Taked,
+            Opened,
+            Closed
         } m_state;
 
-    public:
         InteractiveObj(sw::Entity& entity)
             :   sw::Component{entity},
                 m_state{Placed}

@@ -52,7 +52,12 @@ class ObjCollider
             m_entity.getComponent<ray::Mesh>("MeshManager").setColor(ray::Lime.getColor());
         };
         void onQuitCollide() {
-            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(Color{0, 0, 0, 255});
+            auto &obj = m_entity.getComponent<InteractiveObj>("ScriptManager");
+            auto& mesh = m_entity.getComponent<ray::Mesh>("MeshManager");
+            if (obj.m_state == InteractiveObj::State::Taked)
+                mesh.setColor(Color{255, 255, 255, 0});
+            else
+                mesh.setColor(Color{255, 255, 255, 255});
         };
 
         void onLeftClick() {

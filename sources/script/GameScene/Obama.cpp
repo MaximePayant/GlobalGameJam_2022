@@ -20,6 +20,7 @@ m_state(STAY)
 {
     m_entity.scene().eventManager()["Start"].subscribe(this, &Obama::start);
     m_entity.scene().eventManager()["Update"].subscribe(this, &Obama::update);
+    m_entity.scene().eventManager()["ChangeWorld"].subscribe(this, &Obama::changeWorldEvent);
 }
 
 void Obama::start()
@@ -45,14 +46,18 @@ void Obama::start()
     sprite.setColor(255, 255, 255, 0);
 }
 
+void Obama::changeWorldEvent()
+{
+    if (!m_time.isRunning()) {
+        m_time.start();
+        m_state = FADE_IN;
+    }
+}
+
 void Obama::update()
 {
     int value;
 
-    if (ray::Input::GetKeyReleased(ray::KEY_A) && !m_time.isRunning()) {
-        m_time.start();
-        m_state = FADE_IN;
-    }
     if (m_time.getElapsedTime() > 0.01 && m_time.isRunning()) {
         auto &sprite = m_entity.getComponent<ray::Sprite>("SpriteManager");
         if (m_state == FADE_IN) {

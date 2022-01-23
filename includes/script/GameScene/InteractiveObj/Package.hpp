@@ -31,7 +31,7 @@ class Package
         void start();
         void update();
 
-        void interact() override {};
+        void interact() override;
 
 };
 

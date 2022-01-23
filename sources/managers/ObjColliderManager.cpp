@@ -42,6 +42,6 @@ void ObjColliderManager::onUpdate()
         }
 
         if (isDebuging)
-            rshape->draw(rshape->color());
+            DrawBoundingBox(rshape->cube(), rshape->color());
     }
 }

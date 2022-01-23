@@ -54,6 +54,7 @@ void GameScene::onLoad()
     m_eventManager.create("Mouse_RightClick_Pressed");
     m_eventManager.create("Mouse_LeftClick_Released");
     m_eventManager.create("Mouse_RightClick_Released");
+    m_eventManager.create("ChangeWorld");
     eventManager().create("Start");
     eventManager().create("Update");
 
