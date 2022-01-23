@@ -136,10 +136,8 @@ void Obama::start()
 void Obama::changeWorldEvent()
 {
     if (!m_time.isRunning()) {
-        if (ray::Input::GetKeyReleased(ray::KEY_A) && !m_time.isRunning()) {
-            m_time.start();
-            m_state = FADE_IN;
-        }
+        m_time.start();
+        m_state = FADE_IN;
     }
 }
 
