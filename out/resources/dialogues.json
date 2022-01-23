@@ -1,0 +1,58 @@
+{
+	"Intro-Player": "Encore un jour sans voir le ciel…”,
+
+	"Door1-Player": "Du nouveau pour moi, madame Walsh ?”,
+	"Door1-Guard": "T’as reçu un colis. Un vieux coucou et une lettre.”,
+
+	"MdM1-Player": "Merde...",
+	"MdM1-Player-1": "Qu’est-ce qui m’arrive ?”,
+
+	"Joanna1-Joanna": "Mon crochet…”,
+	"Joanna1-Joanna-1": "Où est mon crochet ?”,
+	"Joanna1-Joanna-2": "Si seulement j’avais encore mes lunettes…”,
+
+	"Joanna2-Joanna": "Oui, je vois, je vois !”,
+	"Joanna2-Joanna-1": "Mon crochet…”,
+	"Joanna2-Joanna-2": "Il est dans la boîte de Carrie…”,
+	"Joanna2-Joanna-3": "Le code, c’était… 7…”,
+	"Joanna2-Joanna-4": "7…”,
+	"Joanna2-Joanna-5": "Je ne me souviens plus…”,
+	"Joanna2-Joanna-6": "Je devrais le noter quelque part… Comme sur ce vieux poème que je garde.”,
+	"Joanna2-Joanna-7": "Il faut que je trouve un stylo…”,
+
+	"Carrie1-Carrie": "Cette sale traîtresse…",
+	"Carrie1-Carrie-1": "Sale traîtresse cupide…”,
+	"Carrie1-Carrie-2": "Elle m’a abattue… Qu’elle s’étouffe avec son fric !”,
+	"Carrie1-Carrie-3": "Je me vengerai…”,
+
+	"Carrie2-Carrie": "On avait un pacte…”,
+	"Carrie2-Carrie-1": "Mon argent contre ma liberté !”,
+	"Carrie2-Carrie-2": "Si je retrouve le pacte, elle est cuite…”,
+
+	"Carrie3-Carrie": "Je l’ai enfin trouvé !”,
+	"Carrie3-Carrie-1": "Elle va payer…”,
+
+	"Door2-Player": "Je crois que vous avez quelque chose à voir avec ce petit bout de papier.”,
+	"Door2-Guard": "Comment est-ce que… Donne-moi ça !”,
+	"Door2-Player-1": "Non. J’ai demandé un stylo.”,
+	"Door2-Guard-1": "D’accord, d’accord, le voilà ton stylo !”,
+	"Door2-Guard-2": "Maintenant donne-moi ce papier, par pitié, personne ne doit savoir !”,
+	"Door2-Player-2": "Pas tout de suite. J’en ai encore besoin.”,
+	"Door2-Guard-3": "Tu vas… Je…”,
+	"Door2-Guard4": "Je crois que je vais vomir…”,
+
+	"Joanna3-Joanna": "Merci ! J’en avais bien besoin !”,
+	"Joanna3-Joanna-1": "Où est-ce que j’ai mis ce poème…”,
+
+	"Joanna4-Joanna": "Il ne me manque que le chiffre du milieu…”,
+	"Joanna4-Joanna-1": "Je ne peux pas essayer les combinaisons quand Carrie regarde…”,
+	"Joanna4-Joanna-2": "J’ai déjà testé celle-ci…”,
+	"Joanna4-Joanna-3": "Et celle-là…”,
+	"Joanna4-Joanna-4": "Celle-là aussi…”,
+
+	"Fin-Mort": "Bienvenue.”,
+	"Fin-Mort-1": "Ton dernier voyage a commencé.”,
+	"Fin-Personnage": "Je suis… mort ?”,,
+	"Fin-Mort-2": "Tu as mis un pied dans le monde des morts. Et maintenant, tu fais partie de lui.”,,
+	"Fin-Mort-3": "Tu es libre de toute entrave, comme tu le désirais.”
+}

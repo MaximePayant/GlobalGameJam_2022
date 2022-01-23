@@ -10,10 +10,13 @@
 #define BOMBERSHIP_GAMESCENE_HPP
 
 #include "SW/Scene.hpp"
+#include "Dialogs.hpp"
 
 class GameScene : public sw::AScene
 {
     public:
+        Dialogs m_dialogue;
+
         using sw::AScene::AScene;
         void onLoad() override;
         void onUpdate() override;

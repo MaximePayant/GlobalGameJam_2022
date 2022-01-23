@@ -2,7 +2,15 @@
   "Verdana": {
     "Path": "resources/fonts/verdana.ttf",
     "Scene": [
-      "Menu"
+      "Menu",
+      "GameScene"
+    ],
+    "Type": "Font"
+  },
+  "ChunkFive": {
+    "Path": "resources/fonts/Chunkfive_Ex.ttf",
+    "Scene": [
+      "GameScene"
     ],
     "Type": "Font"
   }

@@ -15,6 +15,7 @@
 #include "script/GameScene/MainMusic.hpp"
 #include "script/GameScene/Ghost1.hpp"
 #include "script/GameScene/Ghost2.hpp"
+#include "script/GameScene/TextDisplay.hpp"
 
 #include "RectMouseCollider.hpp"
 #include "RectMCManager.hpp"
@@ -25,6 +26,7 @@
 
 void GameScene::onLoad()
 {
+    m_dialogue.loadFile("resources/dialogues.json");
     createManager<ray::TransformManager>("TransformManager");
     createManager<ray::MeshManager>("MeshManager");
     auto& scriptFact = createManager<sw::AScriptFact>("ScriptManager");
@@ -32,6 +34,7 @@ void GameScene::onLoad()
     createManager<ray::MusicManager>("MusicManager");
     createManager<ray::AudioManager>("AudioManager");
     createManager<ray::SpriteManager>("SpriteManager");
+    createManager<ray::TextManager>("TextManager");
 
     m_eventManager.create("Mouse_LeftClick_Pressed");
     m_eventManager.create("Mouse_RightClick_Pressed");
@@ -44,19 +47,22 @@ void GameScene::onLoad()
     auto& music = createEntity("MusicManager");
     auto& loop = createEntity("MusicLoop");
     auto& mainChar = createEntity("MainChar");
+    auto& textDisplay = createEntity("TextDisplay");
 
     setLayer("MeshManager", 0);
     setLayer("SpriteManager", 1);
+    setLayer("TextManager", 2);
 
+    textDisplay.createComponent<TextDisplay>("ScriptManager");
     mainChar.createComponent<MainChar>("ScriptManager");
     music.createComponent<MainMusic>("ScriptManager");
     loop.createComponent<LoopMusic>("ScriptManager");
     obama.createComponent<Obama>("ScriptManager");
     camera.createComponent<ray::RCamera>("CameraManager").setTarget(21.5, 0, -25).setPosition(21.5, 17, -25).setUp(8, 1, 0);
 
-    createManager<RectMCManager>("RectMCManager").isDebuging = true;
-    auto& mc = createEntity("MouseCollider");
-    mc.createComponent<Button>("RectMCManager", sw::Vector2f{0, 0}, sw::Vector2f{100, 50});
+    //createManager<RectMCManager>("RectMCManager").isDebuging = true;
+    //auto& mc = createEntity("MouseCollider");
+    //mc.createComponent<Button>("RectMCManager", sw::Vector2f{0, 0}, sw::Vector2f{100, 50});
 
     eventManager().drop("Start");
 }

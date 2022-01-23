@@ -38,7 +38,7 @@ namespace ray
 
             [[nodiscard]] std::string getString() const;
             [[nodiscard]] float getSize() const;
-            [[nodiscard]] ray::RFont getFont() const;
+            [[nodiscard]] ray::RFont& getFont() const;
             [[nodiscard]] float getSpacing() const;
             [[nodiscard]] RColor getColor() const;
             [[nodiscard]] unsigned int getNbrDisplayedChar() const;
