@@ -1,6 +1,6 @@
 {
-  "Obama": {
-    "Path": "resources/models/BonusBomb.obj",
+  "Desk": {
+    "Path": "resources/models/Bureau.obj",
     "Scene": [
       "GameScene"
     ],
@@ -8,6 +8,114 @@
   },
   "Prison": {
     "Path": "resources/models/Prison.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+
+
+
+  "Ball": {
+    "Path": "resources/models/interactive_obj/Balle.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Box": {
+    "Path": "resources/models/interactive_obj/Boite.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Package": {
+    "Path": "resources/models/interactive_obj/Colis.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Hook": {
+    "Path": "resources/models/interactive_obj/Crochetu.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Note": {
+    "Path": "resources/models/interactive_obj/Grande_Note.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "BreashWall": {
+    "Path": "resources/models/interactive_obj/Mur_avec_Niche.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "BallNote": {
+    "Path": "resources/models/interactive_obj/NoteBalle.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "SimpleNote": {
+    "Path": "resources/models/interactive_obj/NoteSimple.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "PoemeFrag1": {
+    "Path": "resources/models/interactive_obj/Poeme.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "PoemeFrag2": {
+    "Path": "resources/models/interactive_obj/Poeme2.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "AlarmClock": {
+    "Path": "resources/models/interactive_obj/Reveil.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Pen": {
+    "Path": "resources/models/interactive_obj/Stylo.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Drawer": {
+    "Path": "resources/models/interactive_obj/Tirroir.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Poster": {
+    "Path": "resources/models/interactive_obj/Affiche.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Lens": {
+    "Path": "resources/models/interactive_obj/Loupe.obj",
     "Scene": [
       "GameScene"
     ],

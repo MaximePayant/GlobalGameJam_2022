@@ -19,13 +19,14 @@
 
 void RectMCManager::onUpdate()
 {
+    auto mpos = ray::Input::GetMousePosition();
+
     for (auto& [_, name] : m_componentLayer) {
         auto& rshape = m_components[name];
 
         if (!rshape->isActive())
             continue;
 
-        auto mpos = ray::Input::GetMousePosition();
         if (rshape->checkCollision(sw::Vector2i{mpos.x, mpos.y})) {
             if (rshape->state() == RectMouseCollider::None) {
                 rshape->onHover();

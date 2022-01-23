@@ -86,6 +86,7 @@ m_blink(sw::Chrono::Wait)
 {
     m_entity.scene().eventManager()["Start"].subscribe(this, &Obama::start);
     m_entity.scene().eventManager()["Update"].subscribe(this, &Obama::update);
+    m_entity.scene().eventManager()["ChangeWorld"].subscribe(this, &Obama::changeWorldEvent);
 }
 
 void Obama::start()
@@ -132,8 +133,9 @@ void Obama::start()
     m_blink.start();
 }
 
-void Obama::update()
+void Obama::changeWorldEvent()
 {
+    if (!m_time.isRunning()) {
     int value;
     auto &camera = m_entity.scene().getEntity("MainCamera").getComponent<ray::RCamera>("CameraManager");
 
@@ -141,6 +143,12 @@ void Obama::update()
         m_time.start();
         m_state = FADE_IN;
     }
+}
+
+void Obama::update()
+{
+    int value;
+
     if (m_time.getElapsedTime() > 0.01 && m_time.isRunning()) {
         auto &sprite = m_entity.getComponent<ray::Sprite>("SpriteManager");
         if (m_state == FADE_IN) {

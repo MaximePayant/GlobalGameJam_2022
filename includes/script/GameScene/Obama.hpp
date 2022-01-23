@@ -42,6 +42,8 @@ class Obama: public sw::Component
 
         void start();
         void update();
+
+        void changeWorldEvent();
 };
 
 #endif //GGJ_2022_OBAMA_HPP

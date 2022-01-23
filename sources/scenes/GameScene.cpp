@@ -18,8 +18,28 @@
 
 #include "RectMouseCollider.hpp"
 #include "RectMCManager.hpp"
+
+#include "ObjCollider.hpp"
+#include "ObjColliderManager.hpp"
+#include "InteractiveObj/Poster.hpp"
+#include "InteractiveObj/Drawer.hpp"
+#include "InteractiveObj/Pen.hpp"
+#include "InteractiveObj/AlarmClock.hpp"
+#include "InteractiveObj/PoemeFrag1.hpp"
+#include "InteractiveObj/PoemeFrag2.hpp"
+#include "InteractiveObj/SimpleNote.hpp"
+#include "InteractiveObj/Note.hpp"
+#include "InteractiveObj/BallNote.hpp"
+#include "InteractiveObj/BreashWall.hpp"
+#include "InteractiveObj/Hook.hpp"
+#include "InteractiveObj/Package.hpp"
+#include "InteractiveObj/Box.hpp"
+#include "InteractiveObj/Ball.hpp"
+#include "InteractiveObj/Lens.hpp"
+
 #include "RectangleShapeManager.hpp"
 #include "ButtonTest.hpp"
+
 #include "EventInfo/MousePosition.hpp"
 #include "EventInfo/ShowText.hpp"
 #include "Mainchar.hpp"
@@ -35,25 +55,59 @@ void GameScene::onLoad()
     createManager<ray::AudioManager>("AudioManager");
     createManager<ray::SpriteManager>("SpriteManager");
     createManager<ray::TextManager>("TextManager");
+    createManager<ObjColliderManager>("ObjColliderManager").isDebuging = true;
 
     m_eventManager.create("Mouse_LeftClick_Pressed");
     m_eventManager.create("Mouse_RightClick_Pressed");
     m_eventManager.create("Mouse_LeftClick_Released");
     m_eventManager.create("Mouse_RightClick_Released");
+    m_eventManager.create("ChangeWorld");
     eventManager().create("Start");
     eventManager().create("Update");
+
     eventManager().create("ShowText");
     eventManager().create("HideText");
     auto& obama = createEntity("Obama");
     auto& camera = createEntity("MainCamera");
     auto& music = createEntity("MusicManager");
     auto& loop = createEntity("MusicLoop");
+    createEntity("ObjPoster");
+    createEntity("ObjDrawer");
+    createEntity("ObjPen");
+    createEntity("ObjAlarmClock");
+    createEntity("ObjPoemeFrag1");
+    createEntity("ObjPoemeFrag2");
+    createEntity("ObjSimpleNote");
+    createEntity("ObjNote");
+    createEntity("ObjBallNote");
+    createEntity("ObjBreashWall");
+    createEntity("ObjHook");
+    createEntity("ObjPackage");
+    createEntity("ObjBox");
+    createEntity("ObjBall");
+    createEntity("ObjLens");
     auto& mainChar = createEntity("MainChar");
     auto& textDisplay = createEntity("TextDisplay");
 
     setLayer("MeshManager", 0);
     setLayer("SpriteManager", 1);
     setLayer("TextManager", 2);
+
+    scriptFact.createComponent<Poster>("ObjPoster");
+    scriptFact.createComponent<Drawer>("ObjDrawer");
+    scriptFact.createComponent<Pen>("ObjPen");
+    scriptFact.createComponent<AlarmClock>("ObjAlarmClock");
+    scriptFact.createComponent<PoemeFrag1>("ObjPoemeFrag1");
+    scriptFact.createComponent<PoemeFrag2>("ObjPoemeFrag2");
+    scriptFact.createComponent<SimpleNote>("ObjSimpleNote");
+    scriptFact.createComponent<Note>("ObjNote");
+    scriptFact.createComponent<BallNote>("ObjBallNote");
+    scriptFact.createComponent<BreashWall>("ObjBreashWall");
+    scriptFact.createComponent<Hook>("ObjHook");
+    scriptFact.createComponent<Package>("ObjPackage");
+    scriptFact.createComponent<Box>("ObjBox");
+    scriptFact.createComponent<Ball>("ObjBall");
+    scriptFact.createComponent<Lens>("ObjLens");
 
     textDisplay.createComponent<TextDisplay>("ScriptManager");
     mainChar.createComponent<MainChar>("ScriptManager");
@@ -83,15 +137,12 @@ void GameScene::event()
     static sw::EventInfo info{mpos};
 
     updateMousePosition(mpos);
-    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT)) {
-        sw::Speech::Debug("LEFT CLICK !!!!!");
+    if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Pressed", info);
-    }
     else if (ray::Input::IsMouseButtonReleased(ray::Mouse::MOUSE_BUTTON_LEFT))
         m_eventManager.drop("Mouse_LeftClick_Released");
 
     if (ray::Input::IsMouseButtonPressed(ray::Mouse::MOUSE_BUTTON_RIGHT)) {
-        sw::Speech::Debug("RIGHT CLICK !!!!!");
         m_eventManager.drop("Mouse_RightClick_Pressed", info);
     }
     else if (ray::Input::IsMouseButtonReleased(ray::Mouse::MOUSE_BUTTON_RIGHT))
