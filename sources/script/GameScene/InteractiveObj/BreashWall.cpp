@@ -26,12 +26,12 @@ BreashWall::BreashWall(sw::Entity& entity)
 
 void BreashWall::start()
 {
-    auto &model = m_entity.createComponent<ray::Mesh>("MeshManager");
+    m_entity.createComponent<ray::Mesh>("MeshManager").setActive(false);
     auto &transform = m_entity.createComponent<ray::Transform>("TransformManager");
     m_entity.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, -2}, Vector3{100, 100, 1}).setActive(false);
 
-    model.setModel("BreashWall");
-    model.setTexture("BreachWallBase", 0);
+    // model.setModel("BreashWall");
+    // model.setTexture("BreachWallBase", 0);
 }
 
 void BreashWall::update()
