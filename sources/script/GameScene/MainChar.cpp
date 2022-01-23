@@ -52,13 +52,13 @@ void MainChar::update()
 
 std::string MainChar::type() const
 {
-return ("MainChar");
+    return ("MainChar");
 }
 
 void MainChar::changeWorld()
 {
     if (!m_mdm) {
-        static ShowText showText("Intro-Player");
+        static ShowText showText("MdM1-Player");
         static sw::EventInfo info(showText);
 
         m_entity.scene().eventManager().drop("ShowText", info);

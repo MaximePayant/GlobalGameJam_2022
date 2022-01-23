@@ -56,7 +56,7 @@ void GameScene::onLoad()
     createManager<ray::AudioManager>("AudioManager");
     createManager<ray::SpriteManager>("SpriteManager");
     createManager<ray::TextManager>("TextManager");
-    createManager<ObjColliderManager>("ObjColliderManager").isDebuging = true;
+    createManager<ObjColliderManager>("ObjColliderManager").isDebuging = false;
 
     m_eventManager.create("Mouse_LeftClick_Pressed");
     m_eventManager.create("Mouse_RightClick_Pressed");
