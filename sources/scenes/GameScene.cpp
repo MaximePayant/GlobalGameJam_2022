@@ -12,12 +12,16 @@
 #include "script/GameScene/Obama.hpp"
 #include "script/GameScene/MainMusic.hpp"
 #include "script/GameScene/LoopMusic.hpp"
+#include "script/GameScene/MainMusic.hpp"
+#include "script/GameScene/Ghost1.hpp"
+#include "script/GameScene/Ghost2.hpp"
 
 #include "RectMouseCollider.hpp"
 #include "RectMCManager.hpp"
 #include "RectangleShapeManager.hpp"
 #include "ButtonTest.hpp"
 #include "EventInfo/MousePosition.hpp"
+#include "Mainchar.hpp"
 
 void GameScene::onLoad()
 {
@@ -39,10 +43,12 @@ void GameScene::onLoad()
     auto& camera = createEntity("MainCamera");
     auto& music = createEntity("MusicManager");
     auto& loop = createEntity("MusicLoop");
+    auto& mainChar = createEntity("MainChar");
 
     setLayer("MeshManager", 0);
     setLayer("SpriteManager", 1);
 
+    mainChar.createComponent<MainChar>("ScriptManager");
     music.createComponent<MainMusic>("ScriptManager");
     loop.createComponent<LoopMusic>("ScriptManager");
     obama.createComponent<Obama>("ScriptManager");

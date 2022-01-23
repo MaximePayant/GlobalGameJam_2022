@@ -112,10 +112,10 @@ void Obama::start()
     sprite.setTexture("BlackScreen");
     sprite.setColor(255, 255, 255, 0);
 
-    foo[0] = 0.2f;
-    foo[1] = 0.2f;
-    foo[2] = 0.2f;
-    foo[3] = 0.2f;
+    foo[0] = 0.5f;
+    foo[1] = 0.5f;
+    foo[2] = 0.5f;
+    foo[3] = 0.5f;
     m_shader = LoadShader("resources/shaders/base_lighting.vs", "resources/shaders/lighting.fs");
     m_shader.locs[SHADER_LOC_VECTOR_VIEW] = GetShaderLocation(m_shader, "viewPos");
     int ambientLoc = GetShaderLocation(m_shader, "ambient");
@@ -189,15 +189,23 @@ void Obama::changeWorld()
     model.setTextureRoughness("Prison" + arg + "2Roughness", 1);
     model.setTextureRoughness("Prison" + arg + "3Roughness", 2);
     int ambientLoc = GetShaderLocation(m_shader, "ambient");
-    SetShaderValue(m_shader, ambientLoc, foo, SHADER_UNIFORM_VEC4);
     if (m_death) {
-        Color color = {75, 75, 75, 75};
+        foo[0] = 0.2f;
+        foo[1] = 0.2f;
+        foo[2] = 0.2f;
+        foo[3] = 0.2f;
+        Color color = {50, 50, 50, 50};
         m_light.color = color;
     } else {
-        float factor = 0.4f;
+        float factor = 0.5f;
         Color color = {static_cast<unsigned char>(255 * factor), static_cast<unsigned char>(245 * factor), static_cast<unsigned char>(211 * factor), 75};
         m_light.color = color;
+        foo[0] = 0.5f;
+        foo[1] = 0.5f;
+        foo[2] = 0.5f;
+        foo[3] = 0.5f;
     }
+    SetShaderValue(m_shader, ambientLoc, foo, SHADER_UNIFORM_VEC4);
     model.setShaders(m_shader, 0);
     model.setShaders(m_shader, 1);
     model.setShaders(m_shader, 2);

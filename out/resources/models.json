@@ -12,5 +12,26 @@
       "GameScene"
     ],
     "Type": "Model"
-  }
+  },
+  "MainChar": {
+    "Path": "resources/models/MainChar.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Ghost1": {
+    "Path": "resources/models/ghost1.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
+  "Ghost2": {
+  "Path": "resources/models/ghost.obj",
+  "Scene": [
+    "GameScene"
+  ],
+  "Type": "Model"
+}
 }

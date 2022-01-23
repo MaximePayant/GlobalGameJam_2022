@@ -198,5 +198,26 @@
       "GameScene"
     ],
     "Type": "Texture"
+  },
+  "Hair": {
+    "Path": "resources/textures/Hair.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "Madame": {
+    "Path": "resources/textures/UV_Madame.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "Wear": {
+    "Path": "resources/textures/vetments.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
   }
 }
