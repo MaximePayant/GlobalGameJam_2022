@@ -32,7 +32,7 @@ void MainChar::start()
     int ambientLoc = GetShaderLocation(m_shader, "ambient");
     SetShaderValue(m_shader, ambientLoc, foo, SHADER_UNIFORM_VEC4);
 
-    transform.setPosition(20, 0, -21.5);
+    transform.setPosition(20, 0, -26);
     transform.scale(1.75, 1.75, 1.75);
     model.setModel("MainChar");
     model.setTexture("Hair", 2);

@@ -136,18 +136,17 @@ void Obama::start()
 void Obama::changeWorldEvent()
 {
     if (!m_time.isRunning()) {
-    int value;
-    auto &camera = m_entity.scene().getEntity("MainCamera").getComponent<ray::RCamera>("CameraManager");
-
-    if (ray::Input::GetKeyReleased(ray::KEY_A) && !m_time.isRunning()) {
-        m_time.start();
-        m_state = FADE_IN;
+        if (ray::Input::GetKeyReleased(ray::KEY_A) && !m_time.isRunning()) {
+            m_time.start();
+            m_state = FADE_IN;
+        }
     }
 }
 
 void Obama::update()
 {
     int value;
+    auto &camera = m_entity.scene().getEntity("MainCamera").getComponent<ray::RCamera>("CameraManager");
 
     if (m_time.getElapsedTime() > 0.01 && m_time.isRunning()) {
         auto &sprite = m_entity.getComponent<ray::Sprite>("SpriteManager");
