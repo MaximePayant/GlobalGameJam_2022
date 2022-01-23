@@ -27,6 +27,7 @@ set( SRC_FOLDERS
         ${CMAKE_SOURCE_DIR}/sources/script/
         ${CMAKE_SOURCE_DIR}/sources/script/SplashScreen/
         ${CMAKE_SOURCE_DIR}/sources/script/GameScene/
+        ${CMAKE_SOURCE_DIR}/sources/script/GameScene/InteractiveObj/
         ${CMAKE_SOURCE_DIR}/sources/script/components/
         ${CMAKE_SOURCE_DIR}/sources/script/managers/
         )

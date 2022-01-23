@@ -198,5 +198,91 @@
       "GameScene"
     ],
     "Type": "Texture"
+  },
+
+
+  "BallBase": {
+    "Path": "resources/textures/interactive_obj/balle_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "BoxBase": {
+    "Path": "resources/textures/interactive_obj/boite_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PadlockBase": {
+    "Path": "resources/textures/interactive_obj/cadenas_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PackBase": {
+    "Path": "resources/textures/interactive_obj/colis_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "PenBase": {
+    "Path": "resources/textures/interactive_obj/crayon_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "HookBase": {
+    "Path": "resources/textures/interactive_obj/crochet_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "LensBase": {
+    "Path": "resources/textures/interactive_obj/loupe_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "BreachWallBase": {
+    "Path": "resources/textures/interactive_obj/mur_braiche_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "Note1Base": {
+    "Path": "resources/textures/interactive_obj/note1_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "Note2Base": {
+    "Path": "resources/textures/interactive_obj/note2_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "AlarmClockBase": {
+    "Path": "resources/textures/interactive_obj/reveille_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
+  },
+  "DrawerBase": {
+    "Path": "resources/textures/interactive_obj/tiroir_Base_color.png",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Texture"
   }
 }

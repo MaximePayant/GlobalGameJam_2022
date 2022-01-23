@@ -18,6 +18,21 @@
 
 #include "ObjCollider.hpp"
 #include "ObjColliderManager.hpp"
+#include "InteractiveObj/Poster.hpp"
+#include "InteractiveObj/Drawer.hpp"
+#include "InteractiveObj/Pen.hpp"
+#include "InteractiveObj/AlarmClock.hpp"
+#include "InteractiveObj/PoemeFrag1.hpp"
+#include "InteractiveObj/PoemeFrag2.hpp"
+#include "InteractiveObj/SimpleNote.hpp"
+#include "InteractiveObj/Note.hpp"
+#include "InteractiveObj/BallNote.hpp"
+#include "InteractiveObj/BreashWall.hpp"
+#include "InteractiveObj/Hook.hpp"
+#include "InteractiveObj/Package.hpp"
+#include "InteractiveObj/Box.hpp"
+#include "InteractiveObj/Ball.hpp"
+#include "InteractiveObj/Lens.hpp"
 
 #include "RectangleShapeManager.hpp"
 #include "ButtonTest.hpp"
@@ -33,6 +48,7 @@ void GameScene::onLoad()
     createManager<ray::MusicManager>("MusicManager");
     createManager<ray::AudioManager>("AudioManager");
     createManager<ray::SpriteManager>("SpriteManager");
+    createManager<ObjColliderManager>("ObjColliderManager").isDebuging = true;
 
     m_eventManager.create("Mouse_LeftClick_Pressed");
     m_eventManager.create("Mouse_RightClick_Pressed");
@@ -40,26 +56,50 @@ void GameScene::onLoad()
     m_eventManager.create("Mouse_RightClick_Released");
     eventManager().create("Start");
     eventManager().create("Update");
+
     auto& obama = createEntity("Obama");
     auto& camera = createEntity("MainCamera");
     auto& music = createEntity("MusicManager");
     auto& loop = createEntity("MusicLoop");
+    createEntity("ObjPoster");
+    createEntity("ObjDrawer");
+    createEntity("ObjPen");
+    createEntity("ObjAlarmClock");
+    createEntity("ObjPoemeFrag1");
+    createEntity("ObjPoemeFrag2");
+    createEntity("ObjSimpleNote");
+    createEntity("ObjNote");
+    createEntity("ObjBallNote");
+    createEntity("ObjBreashWall");
+    createEntity("ObjHook");
+    createEntity("ObjPackage");
+    createEntity("ObjBox");
+    createEntity("ObjBall");
+    createEntity("ObjLens");
 
     setLayer("MeshManager", 0);
     setLayer("SpriteManager", 1);
+
+    scriptFact.createComponent<Poster>("ObjPoster");
+    scriptFact.createComponent<Drawer>("ObjDrawer");
+    scriptFact.createComponent<Pen>("ObjPen");
+    scriptFact.createComponent<AlarmClock>("ObjAlarmClock");
+    scriptFact.createComponent<PoemeFrag1>("ObjPoemeFrag1");
+    scriptFact.createComponent<PoemeFrag2>("ObjPoemeFrag2");
+    scriptFact.createComponent<SimpleNote>("ObjSimpleNote");
+    scriptFact.createComponent<Note>("ObjNote");
+    scriptFact.createComponent<BallNote>("ObjBallNote");
+    scriptFact.createComponent<BreashWall>("ObjBreashWall");
+    scriptFact.createComponent<Hook>("ObjHook");
+    scriptFact.createComponent<Package>("ObjPackage");
+    scriptFact.createComponent<Box>("ObjBox");
+    scriptFact.createComponent<Ball>("ObjBall");
+    scriptFact.createComponent<Lens>("ObjLens");
 
     music.createComponent<MainMusic>("ScriptManager");
     loop.createComponent<LoopMusic>("ScriptManager");
     obama.createComponent<Obama>("ScriptManager");
     camera.createComponent<ray::RCamera>("CameraManager").setTarget(21.5, 0, -25).setPosition(21.5, 17, -25).setUp(8, 1, 0);
-
-    // createManager<RectMCManager>("RectMCManager").isDebuging = true;
-    // auto& mc = createEntity("MouseCollider");
-    // mc.createComponent<Button>("RectMCManager", sw::Vector2f{0, 0}, sw::Vector2f{100, 50});
-
-    createManager<ObjColliderManager>("ObjColliderManager").isDebuging = true;
-    auto& oc = createEntity("ObjCollider");
-    oc.createComponent<ObjCollider>("ObjColliderManager", Vector3{100, 100, 0}, Vector3{100, 100, 100});
 
     eventManager().drop("Start");
 }

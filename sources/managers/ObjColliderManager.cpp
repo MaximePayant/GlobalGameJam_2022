@@ -24,8 +24,6 @@ void ObjColliderManager::onUpdate()
     auto mray = GetMouseRay(GetMousePosition(), *camera);
 
     ray::RayCollider ray(m_scene.getEntity("MainCamera"), Vector3{GetMousePosition().x, GetMousePosition().y, 0}, mray.direction);
-    sw::Speech::Debug("MouseRay Pos : " + std::to_string(mray.position.x) + " / " + std::to_string(mray.position.y));
-    sw::Speech::Debug("MouseRay Dir : " + std::to_string(mray.direction.x) + " / " + std::to_string(mray.direction.y));
     for (auto& [_, name] : m_componentLayer) {
         auto& rshape = m_components[name];
 

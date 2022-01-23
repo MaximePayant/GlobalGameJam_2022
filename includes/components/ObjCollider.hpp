@@ -17,6 +17,8 @@
 
 #include "RAY/components/Collider.hpp"
 #include "RAY/utils/Color.hpp"
+#include "RAY/components/Mesh.hpp"
+#include "InteractiveObj/InteractiveObj.hpp"
 
 class ObjCollider
     :   public ray::CubeCollider
@@ -42,20 +44,31 @@ class ObjCollider
         Color color(Color value) { m_color = value; return (m_color); }
 
         void leftClickPressed_Event(sw::EventInfo& info);
+        void rightClickPressed_Event(sw::EventInfo& info);
         void leftClickReleased_Event();
+        void rightClickReleased_Event();
 
         void onEnterCollide() {
-            color(ray::Blue.getColor());
+            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(ray::Lime.getColor());
         };
         void onQuitCollide() {
-            color(ray::Green.getColor());
+            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(Color{0, 0, 0, 255});
         };
 
-        void onClick() {
-            color(ray::Yellow.getColor());
+        void onLeftClick() {
+            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(ray::Red.getColor());
         };
-        void onRelease() {
-            color(ray::Blue.getColor());
+        void onLeftRelease() {
+            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(ray::Lime.getColor());
+            m_entity.getComponent<InteractiveObj>("ScriptManager").interact();
+        };
+
+        void onRightClick() {
+            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(ray::Red.getColor());
+        };
+        void onRightRelease() {
+            m_entity.getComponent<ray::Mesh>("MeshManager").setColor(ray::Lime.getColor());
+            m_entity.getComponent<InteractiveObj>("ScriptManager").take();
         };
 
 };
