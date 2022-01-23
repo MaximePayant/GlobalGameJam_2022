@@ -40,6 +40,7 @@ void Package::update()
 void Package::interact()
 {
     m_entity.getComponent<ray::Mesh>("MeshManager").setActive(false);
+    m_entity.getComponent<ObjCollider>("ObjColliderManager").setActive(false);
 
     auto& ac = m_entity.scene().getEntity("ObjAlarmClock");
     ac.getComponent<ray::Mesh>("MeshManager").setActive(true);

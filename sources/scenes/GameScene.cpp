@@ -36,6 +36,7 @@
 #include "InteractiveObj/Box.hpp"
 #include "InteractiveObj/Ball.hpp"
 #include "InteractiveObj/Lens.hpp"
+#include "InteractiveObj/Pillow.hpp"
 
 #include "RectangleShapeManager.hpp"
 #include "ButtonTest.hpp"
@@ -86,6 +87,7 @@ void GameScene::onLoad()
     createEntity("ObjBox");
     createEntity("ObjBall");
     createEntity("ObjLens");
+    createEntity("ObjPillow");
     auto& mainChar = createEntity("MainChar");
     auto& textDisplay = createEntity("TextDisplay");
 
@@ -108,6 +110,7 @@ void GameScene::onLoad()
     scriptFact.createComponent<Box>("ObjBox");
     scriptFact.createComponent<Ball>("ObjBall");
     scriptFact.createComponent<Lens>("ObjLens");
+    scriptFact.createComponent<Pillow>("ObjPillow");
 
     textDisplay.createComponent<TextDisplay>("ScriptManager");
     mainChar.createComponent<MainChar>("ScriptManager");

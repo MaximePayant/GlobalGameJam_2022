@@ -121,6 +121,13 @@
     ],
     "Type": "Model"
   },
+  "Pillow": {
+    "Path": "resources/models/interactive_obj/coussin.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  },
   "MainChar": {
     "Path": "resources/models/MainChar.obj",
     "Scene": [
@@ -136,10 +143,10 @@
     "Type": "Model"
   },
   "Ghost2": {
-  "Path": "resources/models/ghost.obj",
-  "Scene": [
-    "GameScene"
-  ],
-  "Type": "Model"
-}
+    "Path": "resources/models/ghost.obj",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Model"
+  }
 }
