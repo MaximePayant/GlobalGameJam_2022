@@ -5,5 +5,376 @@
       "SplashScreen"
     ],
     "Type": "Sound"
-  }
+  },
+  "Bass Suspens": {
+    "Path": "resources/audio/Musique/Loop_Bass Suspens.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Music"
+  },
+  "Bass Stress": {
+    "Path": "resources/audio/Musique/Loop_Bass Stress.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Ponctuation 1": {
+    "Path": "resources/audio/Musique/Ponctuation 1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Ponctuation 2": {
+    "Path": "resources/audio/Musique/Ponctuation 2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Ponctuation 3": {
+    "Path": "resources/audio/Musique/Ponctuation 3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Loop Drone 1": {
+    "Path": "resources/audio/Amb/Ghost World/Loop_Drone 1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Loop Drone 2": {
+    "Path": "resources/audio/Amb/Ghost World/Loop_Drone 2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Long 1": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Long_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Long 2": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Long_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Long 3": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Long_3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Long 4": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Long_4.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Short 1": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Short_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Short 2": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Short_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Short 3": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Short_3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Whisper Short 4": {
+    "Path": "resources/audio/Amb/Ghost World/Whisper Short_4.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Roomtone Jail": {
+    "Path": "resources/audio/Amb/Jail/Roomtone Jail - stem.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Door Jail 1": {
+    "Path": "resources/audio/Amb/Jail/Door Jail_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Door Jail 2": {
+    "Path": "resources/audio/Amb/Jail/Door Jail_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Door Jail 3": {
+    "Path": "resources/audio/Amb/Jail/Door Jail_3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Door Jail 4": {
+    "Path": "resources/audio/Amb/Jail/Door Jail_4.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Jail Hit 1": {
+    "Path": "resources/audio/Amb/Jail/Jail hit_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Jail Hit 2": {
+    "Path": "resources/audio/Amb/Jail/Jail hit_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Jail Hit 3": {
+    "Path": "resources/audio/Amb/Jail/Jail hit_3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Gardien Cough 1": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Cough_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+   "Gardien Cough 2": {
+     "Path": "resources/audio/Char/Gardien/Gardien_Cough_2.wav",
+     "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+   "Gardien Cough 3": {
+     "Path": "resources/audio/Char/Gardien/Gardien_Cough_3.wav",
+     "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Gardien Cough 4": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Cough_4.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Gardien Footstep Far": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Footstep Far.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Gardien Talki Walkie 1": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Talki Walkie_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+   "Gardien Talki Walkie 2": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Talki Walkie_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+   "Gardien Walking 1": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Walking_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Gardien Walking 2": {
+    "Path": "resources/audio/Char/Gardien/Gardien_Walking_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Alarm Clock 1": {
+    "Path": "resources/audio/Props/Alarm Clock_1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Alarm Clock 2": {
+    "Path": "resources/audio/Props/Alarm Clock_2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Carton Pull": {
+    "Path": "resources/audio/Props/Carton_Pull.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Carton Push": {
+    "Path": "resources/audio/Props/Carton_Push.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Clock Loop": {
+    "Path": "resources/audio/Props/Clock_Loop.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Drawer Close": {
+    "Path": "resources/audio/Props/Drawer_Close.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Drawer Close": {
+    "Path": "resources/audio/Props/Drawer_Close.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+    "Drawer Open": {
+    "Path": "resources/audio/Props/Drawer_Open.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Hook": {
+    "Path": "resources/audio/Props/Hook.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Unlock Locker": {
+    "Path": "resources/audio/Props/Lock.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Paper Read 1": {
+    "Path": "resources/audio/Props/Paper Read 1.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Paper Read 2": {
+    "Path": "resources/audio/Props/Paper Read 2.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Paper Read 3": {
+    "Path": "resources/audio/Props/Paper Read 3.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Paper Read 4": {
+    "Path": "resources/audio/Props/Paper Read 4.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Pillow": {
+    "Path": "resources/audio/Props/Pillow - stem.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Poster Scratch": {
+    "Path": "resources/audio/Props/Poster Scratch.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Shell": {
+    "Path": "resources/audio/Props/Shell - stem.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Writing": {
+    "Path": "resources/audio/Props/Writing.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Take Other": {
+    "Path": "resources/audio/Props/Take Other.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Wooden Box": {
+    "Path": "resources/audio/Props/Wooden_Box_Open.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
+  "Exterior Amb": {
+    "Path": "resources/audio/Amb/Loop_Exterior.wav",
+    "Scene": [
+      "GameScene"
+    ],
+    "Type": "Sound"
+  },
 }

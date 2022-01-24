@@ -58,7 +58,7 @@ void Logo::update() {
             if (sprite.color().getColor().a == 0) {
                 chrono.stop();
                 sw::Engine::getModule<ray::RayLibModule>().SetBackGroundColor(BLACK).ClearWindowType(FLAG_WINDOW_UNDECORATED);
-                sw::Engine::setActiveScene("Main");
+                sw::Engine::setActiveScene("GameScene");
             }
         }
         chrono.tour();

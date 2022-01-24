@@ -37,8 +37,8 @@ inline bool sw::Rect<T>::contains(T x, T y) const
 {
     if (x > left
     &&  y > top
-    &&  x < width
-    &&  y < height)
+    &&  x < left + width
+    &&  y < top + height)
         return (true);
     return (false);
 }
@@ -48,8 +48,8 @@ inline bool sw::Rect<T>::contains(const sw::Vector2<T>& point) const
 {
     if (point.x > left
     &&  point.y > top
-    &&  point.x < width
-    &&  point.y < height)
+    &&  point.x < left + width
+    &&  point.y < top + height)
         return (true);
     return (false);
 }

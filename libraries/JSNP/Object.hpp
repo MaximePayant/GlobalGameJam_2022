@@ -27,7 +27,9 @@ namespace jsnp
             ~Object() = default;
 
             std::list<Token>::const_iterator begin() const noexcept { return (m_tokens.begin()); }
+            std::list<Token>::iterator begin() noexcept { return (m_tokens.begin()); }
             std::list<Token>::const_iterator end() const noexcept { return (m_tokens.end()); }
+            std::list<Token>::iterator end() noexcept { return (m_tokens.end()); }
 
             template <typename T>
             Token& emplace_front(std::string key, T value);
