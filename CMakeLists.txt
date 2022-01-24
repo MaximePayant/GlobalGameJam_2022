@@ -1,7 +1,7 @@
 ## CMAKE VAR
 ## <=====================================>
 cmake_minimum_required( VERSION 3.17...3.20 )
-set( CMAKE_BUILD_TYPE Debug ) # Release / RelWithDebInfo / Debug
+#set( CMAKE_BUILD_TYPE Debug ) # Release / RelWithDebInfo / Debug
 set( CMAKE_CXX_STANDARD 20 )
 set( CMAKE_CXX_STANDARD_REQUIRED True )
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/out/ )
@@ -20,6 +20,8 @@ project( Incaribus
         LANGUAGES
         CXX
         )
+
+message("Build type set to ${CMAKE_BUILD_TYPE}")
 
 if (WIN32)
     message("Windows system detected, prepare project...")

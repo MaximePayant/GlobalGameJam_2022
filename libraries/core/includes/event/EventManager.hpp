@@ -15,15 +15,16 @@
 #include <set>
 
 #include "../concepts.hpp"
+#include "../Config.hpp"
 
 #include "Event.hpp"
 
 namespace sw
 {
-    class EventManager
+    class SW_CORE_API_EXPORT EventManager
     {
         private:
-            std::unordered_map<std::string, std::unique_ptr<Event>> m_eventList;
+            std::unordered_map<std::string, std::shared_ptr<Event>> m_eventList;
 
         public:
             EventManager()

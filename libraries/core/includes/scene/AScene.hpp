@@ -59,7 +59,7 @@ namespace sw
             } m_managerMap;
 
             class EntityMap :
-                    public std::unordered_map<std::string, std::unique_ptr<IEntity>>
+                private std::unordered_map<std::string, std::unique_ptr<IEntity>>
             {
                 public:
                     using std::unordered_map<std::string, std::unique_ptr<IEntity>>::begin;

@@ -6,7 +6,7 @@
 */
 
 template <ConcreteScene Scene>
-inline Scene& sw::Engine::createScene(const std::string& sceneName)
+inline Scene& sw::Engine::createScene(const std::string sceneName)
 {
     if (hasScene(sceneName))
         sw::Speech::Warning(sw::Log::warning123(FUNCTION, sceneName));
@@ -18,7 +18,7 @@ inline Scene& sw::Engine::createScene(const std::string& sceneName)
 }
 
 template <ConcreteScene Scene>
-inline Scene& sw::Engine::getScene(const std::string& sceneName)
+inline Scene& sw::Engine::getScene(const std::string sceneName)
 try
 {
     return (static_cast<Scene&>(*getScenes().at(sceneName)));

@@ -20,7 +20,7 @@ namespace sw
 
             virtual void loadResources() = 0;
             virtual void unloadResources() = 0;
-            virtual void addNeededResource(const std::string& name, const std::string& path, const std::string& type) = 0;
+            virtual void loadResourcesFile(const std::string& path) = 0;
     };
 
     class ITexture {

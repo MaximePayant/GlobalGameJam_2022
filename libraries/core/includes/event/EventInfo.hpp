@@ -10,6 +10,7 @@
 #define __SHIPWRECK_EVENTINFO_HPP__
 
 #include "../concepts.hpp"
+#include "../Config.hpp"
 
 namespace sw
 {
@@ -20,7 +21,7 @@ namespace sw
             virtual ~IEventInfo() = default;
     };
 
-    class EventInfo
+    class SW_CORE_API_EXPORT EventInfo
     {
 
         private:

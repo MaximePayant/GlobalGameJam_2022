@@ -21,24 +21,39 @@ set( EXT cpp )
 ## SOURCE FOLDERS
 set( SRC_FOLDERS
         ${CMAKE_SOURCE_DIR}/sources/
+        ${CMAKE_SOURCE_DIR}/sources/scenes/
+        ${CMAKE_SOURCE_DIR}/sources/script/
+        ${CMAKE_SOURCE_DIR}/sources/script/SplashScreen/
         )
 ## INCLUDE FOLDERS
 set( INC_FOLDERS
-        ${CMAKE_SOURCE_DIR}/includes/
         ${CMAKE_SOURCE_DIR}/libraries/
-        ${CMAKE_SOURCE_DIR}/libraries/EngineCore/
+        ${CMAKE_SOURCE_DIR}/libraries/core/
+        ${CMAKE_SOURCE_DIR}/includes/
+        ${CMAKE_SOURCE_DIR}/includes/scenes/
+        ${CMAKE_SOURCE_DIR}/includes/script/
+        ${CMAKE_SOURCE_DIR}/includes/script/SplashScreen/
         )
 ## IMPORTED SHARED LIBRARY NAME
 set( SHARED_LIB_NAME
         Jsnp
+        SWEngine-Core
+        SWEngine-RayLibModule
+        raylib
         )
 ## IMPORTED SHARED LIBRARY LOCATION
 set( SHARED_LIB_LOCATION
         ${CMAKE_SOURCE_DIR}/libraries/Jsnp.dll
+        ${CMAKE_SOURCE_DIR}/libraries/SWEngine-Core.dll
+        ${CMAKE_SOURCE_DIR}/libraries/SWEngine-RayLibModule.dll
+        ${CMAKE_SOURCE_DIR}/libraries/raylib.dll
         )
 ## IMPORTED SHARED LIBRARY .lib file
 set( SHARED_LIB
         ${CMAKE_SOURCE_DIR}/libraries/Jsnp.lib
+        ${CMAKE_SOURCE_DIR}/libraries/SWEngine-Core.lib
+        ${CMAKE_SOURCE_DIR}/libraries/SWEngine-RayLibModule.lib
+        ${CMAKE_SOURCE_DIR}/libraries/raylib.lib
         )
 ## <=====================================>
 

@@ -20,5 +20,5 @@ inline Module& sw::Engine::getModule()
 {
     if (!hasModule())
         throw sw::Error(sw::Log::error112(FUNCTION));
-    return (static_cast<Module&>(*m_module));
+    return (static_cast<Module&>(getModule()));
 }

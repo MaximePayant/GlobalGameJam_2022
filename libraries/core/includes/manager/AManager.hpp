@@ -36,12 +36,12 @@ namespace sw
 
         protected:
             class Components :
-                private std::unordered_map<std::string, std::unique_ptr<Cpt>>
+                private std::unordered_map<std::string, std::shared_ptr<Cpt>>
             {
                 public:
-                    using std::unordered_map<std::string, std::unique_ptr<Cpt>>::begin;
-                    using std::unordered_map<std::string, std::unique_ptr<Cpt>>::end;
-                    using std::unordered_map<std::string, std::unique_ptr<Cpt>>::operator[];
+                    using std::unordered_map<std::string, std::shared_ptr<Cpt>>::begin;
+                    using std::unordered_map<std::string, std::shared_ptr<Cpt>>::end;
+                    using std::unordered_map<std::string, std::shared_ptr<Cpt>>::operator[];
 
                 friend AManager;
 

@@ -6,6 +6,7 @@
 ** Description: [CHANGE]
 */
 
+#include "SW/Event.hpp"
 #include "scenes/SplashScreen.hpp"
 #include "RAY/components/components.hpp"
 #include "RAY/components_manager/managers.hpp"
@@ -20,11 +21,6 @@ void SplashScreen::onLoad()
     eventManager().create("Start");
     eventManager().create("Update");
     auto& logo = createEntity("Logo");
-
-    setLayer("ScriptManager", 0);
-    setLayer("AudioManager", 1);
-    setLayer("TransformManager", 2);
-    setLayer("SpriteManager", 3);
 
     logo.createComponent<Logo>("ScriptManager");
     eventManager().drop("Start");

@@ -28,9 +28,10 @@ void Logo::start()
     auto &audio = m_entity.createComponent<ray::Audio>("AudioManager");
 
     sprite.setTexture("Logo").setColor({255, 255, 255, 0});
+    sw::Engine::getModule<ray::RayLibModule>().SetBackGroundColor(BLACK);
     transform.setPosition(700, 200);
     m_state = FADE_IN;
-    audio.addSound("Horn", "Horn").play("Horn");
+    audio.addSound("Horn", "Horn").setVolume(25).play("Horn");
 }
 
 void Logo::update() {

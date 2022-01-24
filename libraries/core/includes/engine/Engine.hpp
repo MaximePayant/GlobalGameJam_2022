@@ -55,10 +55,10 @@ namespace sw
 
 
             template <ConcreteScene Scene>
-            static Scene& createScene(const std::string& sceneName);
+            static Scene& createScene(const std::string sceneName);
 
             template <ConcreteScene Scene>
-            static Scene& getScene(const std::string& sceneName);
+            static Scene& getScene(const std::string sceneName);
             static AScene& getScene(const std::string& sceneName);
             static std::unordered_map<std::string, std::unique_ptr<AScene>>& getScenes();
 
@@ -69,7 +69,7 @@ namespace sw
             static void setActiveSceneName(const std::string& newSceneName);
 
             static void deleteScene(const std::string& sceneName);
-            static bool hasScene(const std::string& sceneName);
+            static bool hasScene(const std::string sceneName);
             static void eraseScenes();
 
             static void setActiveScene(const std::string& name);

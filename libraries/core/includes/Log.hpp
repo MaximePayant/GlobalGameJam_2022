@@ -121,7 +121,7 @@ namespace sw
 
         /// Warning Engine Create Module
         static Log warning122(const std::string& function)
-        { return Log(function + " - Module already exist. Return the existing RAY.", "3122"); }
+        { return Log(function + " - Module already exist. Return the existing module.", "3122"); }
 
         /// Warning Engine Delete Module
         static Log warning132(const std::string& function)
