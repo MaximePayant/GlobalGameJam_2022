@@ -14,7 +14,7 @@
 
 namespace ray
 {
-    class BillBoard : public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT BillBoard : public sw::Component
     {
         private:
             std::shared_ptr<ray::RTexture> m_texture;

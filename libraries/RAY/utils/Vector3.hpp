@@ -9,10 +9,12 @@
 #ifndef __RAYMODULE_VECTOR3_HPP__
 #define __RAYMODULE_VECTOR3_HPP__
 
+#include "../RayLibModule_Config.hpp"
+
 namespace ray
 {
     template <typename T>
-    class Vector3
+    class RAY_GRAPH_MODULE_EXPORT Vector3
     {
 
         public:

@@ -11,10 +11,11 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Sprite.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class SpriteManager : public sw::AManager<Sprite>
+    class RAY_GRAPH_MODULE_EXPORT SpriteManager : public sw::AManager<Sprite>
     {
         public:
             using sw::AManager<Sprite>::AManager;

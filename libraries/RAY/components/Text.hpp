@@ -12,10 +12,11 @@
 #include "SW/Component.hpp"
 #include "../resources/Font.hpp"
 #include "../utils/Color.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class Text : public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT Text : public sw::Component
     {
         private:
             std::string m_text;

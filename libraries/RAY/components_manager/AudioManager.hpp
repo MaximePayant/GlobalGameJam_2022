@@ -11,11 +11,12 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Audio.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
 
-    class AudioManager : public sw::AManager<Audio>
+    class RAY_GRAPH_MODULE_EXPORT AudioManager : public sw::AManager<Audio>
     {
     public:
         using sw::AManager<Audio>::AManager;

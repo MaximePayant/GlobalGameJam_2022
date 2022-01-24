@@ -13,6 +13,7 @@
 
 #include "RAYLIB/raylib.h"
 #include "SW/Utils.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
@@ -146,7 +147,7 @@ namespace ray
         MOUSE_BUTTON_BACK    = 6,
     } Mouse;
 
-    class Input
+    class RAY_GRAPH_MODULE_EXPORT Input
     {
         public:
             Input() = delete;

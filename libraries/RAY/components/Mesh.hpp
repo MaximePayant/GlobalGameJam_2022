@@ -13,10 +13,11 @@
 #include "../resources/Model.hpp"
 #include "../resources/Texture.hpp"
 #include "../utils/Color.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class Mesh : public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT Mesh : public sw::Component
     {
         private:
             Model m_model;

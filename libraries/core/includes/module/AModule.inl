@@ -16,7 +16,7 @@ inline bool sw::AModule::isLoad() const
 
 inline std::ostream& operator<<(std::ostream& os, const sw::AModule& module)
 {
-    os  << "Module of type : '" << module.type() << "'\n"
-        << "\tIs Load : " << std::boolalpha << module.isLoad() << "\n";
+    //os  << "Module of type : '" << module.type() << "'\n"
+    //    << "\tIs Load : " << std::boolalpha << module.isLoad() << "\n";
     return (os);
 }

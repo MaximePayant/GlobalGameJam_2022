@@ -11,10 +11,11 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Movement.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class MovementManager : public sw::AManager<Movement>
+    class RAY_GRAPH_MODULE_EXPORT MovementManager : public sw::AManager<Movement>
     {
         public:
             using sw::AManager<Movement>::AManager;

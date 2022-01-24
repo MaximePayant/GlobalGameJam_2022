@@ -5,9 +5,6 @@
 ** rect.inl
 */
 
-#include "rect.hpp"
-#include "vector2.hpp"
-
 template <typename T>
 inline sw::Rect<T>::Rect() :
 left(0),

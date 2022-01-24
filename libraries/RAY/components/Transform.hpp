@@ -12,11 +12,11 @@
 #include "SW/Component.hpp"
 #include "SW/Utils.hpp"
 #include "../utils/Vector3.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class Transform :
-            public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT Transform : public sw::Component
     {
 
     private:

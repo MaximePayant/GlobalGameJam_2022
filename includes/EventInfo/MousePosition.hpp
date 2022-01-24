@@ -22,14 +22,14 @@ class MousePosition_EventInfo
 {
 
     public:
-        MousePosition_EventInfo(int X, int Y)
+        MousePosition_EventInfo(float X, float Y)
             :   x{X},
                 y{Y}
         {}
-        ~MousePosition_EventInfo() = default;
+        ~MousePosition_EventInfo() override = default;
 
-        int x;
-        int y;
+        float x;
+        float y;
 
 };
 

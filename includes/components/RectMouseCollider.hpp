@@ -38,7 +38,7 @@ class RectMouseCollider
 
     public:
         RectMouseCollider(sw::Entity& entity, const sw::Vector2f& pos, const sw::Vector2f& size);
-        RectMouseCollider(sw::Entity& entity, int left, int top, int width, int height);
+        //RectMouseCollider(sw::Entity& entity, int left, int top, int width, int height);
         virtual ~RectMouseCollider() = default;
 
         State state() const { return (m_state); }
@@ -46,7 +46,7 @@ class RectMouseCollider
         void startClock() { m_clock.start(); }
         double clock() { return (m_clock.getElapsedTime()); }
 
-        bool checkCollision(const sw::Vector2i& point);
+        bool checkCollision(sw::Vector2f& point);
 
         void leftClickPressed_Event(sw::EventInfo& info);
         void leftClickReleased_Event();

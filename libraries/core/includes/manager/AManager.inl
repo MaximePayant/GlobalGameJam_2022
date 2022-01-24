@@ -158,13 +158,13 @@ catch (std::out_of_range&) {
 }
 
 template <ConcreteComponent Cpt>
-inline std::unordered_map<std::string, std::unique_ptr<Cpt>>::iterator sw::AManager<Cpt>::begin()
+inline typename std::unordered_map<std::string, std::shared_ptr<Cpt>>::iterator sw::AManager<Cpt>::begin()
 {
     return (m_components.begin());
 }
 
 template <ConcreteComponent Cpt>
-inline std::unordered_map<std::string, std::unique_ptr<Cpt>>::iterator sw::AManager<Cpt>::end()
+inline typename std::unordered_map<std::string, std::shared_ptr<Cpt>>::iterator sw::AManager<Cpt>::end()
 {
     return (m_components.end());
 }

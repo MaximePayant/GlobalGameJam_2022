@@ -19,7 +19,6 @@
 #include "../scene/AScene.hpp"
 #include "../module/AModule.hpp"
 #include "../utils/Speech.hpp"
-#include "../Config.hpp"
 
 namespace sw
 {
@@ -37,9 +36,13 @@ namespace sw
             static bool m_moduleToDelete;
 
             static void deleteRequestedScenes();
+            static std::unordered_map<std::string, std::unique_ptr<AScene>>& getScenes();
+
             static void setRequestedActiveScene();
+            static void setActiveSceneName(const std::string& newSceneName);
 
             static void executeDeleteModule();
+            static void setModule(std::unique_ptr<AModule>&& module);
 
         public:
             Engine() = delete;
@@ -60,13 +63,11 @@ namespace sw
             template <ConcreteScene Scene>
             static Scene& getScene(const std::string sceneName);
             static AScene& getScene(const std::string& sceneName);
-            static std::unordered_map<std::string, std::unique_ptr<AScene>>& getScenes();
 
             template <ConcreteScene Scene>
             static Scene& activeScene();
             static AScene& activeScene();
             static std::string activeSceneName();
-            static void setActiveSceneName(const std::string& newSceneName);
 
             static void deleteScene(const std::string& sceneName);
             static bool hasScene(const std::string sceneName);
@@ -86,7 +87,6 @@ namespace sw
             static bool hasModule();
 
             static void display(std::ostream& os = std::cout, bool dispContent = false);
-            static void setModule(std::unique_ptr<AModule>&& module);
 
     }; // class Engine
 

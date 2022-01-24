@@ -99,8 +99,8 @@ namespace sw
             void setLayer(const std::string& entityName, int layer) override;
             [[nodiscard]] int getLayer(const std::string& entityName) const override;
 
-            std::unordered_map<std::string, std::unique_ptr<Cpt>>::iterator begin();
-            std::unordered_map<std::string, std::unique_ptr<Cpt>>::iterator end();
+            typename std::unordered_map<std::string, std::shared_ptr<Cpt>>::iterator begin();
+            typename std::unordered_map<std::string, std::shared_ptr<Cpt>>::iterator end();
             Cpt& operator[](const std::string& entityName);
 
     }; // class AManager

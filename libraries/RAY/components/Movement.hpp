@@ -11,11 +11,12 @@
 
 #include "SW/Component.hpp"
 #include "../utils/Vector3.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
 
-    class Movement : public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT Movement : public sw::Component
     {
 
         public:

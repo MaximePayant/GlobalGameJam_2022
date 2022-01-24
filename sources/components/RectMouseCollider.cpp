@@ -37,8 +37,8 @@ void RectMouseCollider::leftClickPressed_Event(sw::EventInfo& info)
         return;
 
     auto& mpos = info.getInfo<MousePosition_EventInfo>();
-
-    if (checkCollision(sw::Vector2i{mpos.x, mpos.y})
+    auto vector = sw::Vector2f{mpos.x, mpos.y};
+    if (checkCollision(vector)
     && m_state == RectMouseCollider::Hover) {
         onLeftClick();
         m_state = RectMouseCollider::Lclick;
@@ -61,8 +61,9 @@ void RectMouseCollider::rightClickPressed_Event(sw::EventInfo& info)
         return;
 
     auto& mpos = info.getInfo<MousePosition_EventInfo>();
+    auto vector = sw::Vector2f{mpos.x, mpos.y};
 
-    if (checkCollision(sw::Vector2i{mpos.x, mpos.y})
+    if (checkCollision(vector)
     && m_state == RectMouseCollider::Hover) {
         onRightClick();
         m_state = RectMouseCollider::Rclick;
@@ -79,7 +80,7 @@ void RectMouseCollider::rightClickReleased_Event()
     m_state = RectMouseCollider::Hover;
 }
 
-bool RectMouseCollider::checkCollision(const sw::Vector2i& point)
+bool RectMouseCollider::checkCollision(sw::Vector2f& point)
 {
     static sw::Reference<ray::Transform> tfm;
 

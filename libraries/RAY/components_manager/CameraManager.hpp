@@ -11,11 +11,12 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Camera.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
 
-    class CameraManager : public sw::AManager<RCamera>
+    class RAY_GRAPH_MODULE_EXPORT CameraManager : public sw::AManager<RCamera>
     {
     public:
         using sw::AManager<RCamera>::AManager;

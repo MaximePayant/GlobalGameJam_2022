@@ -26,8 +26,9 @@ void RectMCManager::onUpdate()
 
         if (!rshape->isActive())
             continue;
+        auto vector = sw::Vector2f{mpos.x, mpos.y};
 
-        if (rshape->checkCollision(sw::Vector2i{mpos.x, mpos.y})) {
+        if (rshape->checkCollision(vector)) {
             if (rshape->state() == RectMouseCollider::None) {
                 rshape->onHover();
                 rshape->state(RectMouseCollider::Hover);

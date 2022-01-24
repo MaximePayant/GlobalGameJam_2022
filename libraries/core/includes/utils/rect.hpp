@@ -10,6 +10,7 @@
 
 #include "vector2.hpp"
 
+
 namespace sw
 {
 

@@ -10,10 +10,11 @@
 #define __RAYMODULE_COLOR_HPP__
 
 #include "RAYLIB/raylib.h"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class RColor
+    class RAY_GRAPH_MODULE_EXPORT RColor
     {
         private:
             Color m_color;

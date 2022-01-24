@@ -5,8 +5,6 @@
 ** vector2.cpp
 */
 
-#include <iostream>
-
 template <typename T>
 inline sw::Vector2<T>::Vector2()
 {

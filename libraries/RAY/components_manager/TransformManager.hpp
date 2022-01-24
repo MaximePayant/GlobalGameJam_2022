@@ -11,10 +11,11 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Transform.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class TransformManager : public sw::AManager<Transform>
+    class RAY_GRAPH_MODULE_EXPORT TransformManager : public sw::AManager<Transform>
     {
         public:
             using sw::AManager<Transform>::AManager;

@@ -15,13 +15,14 @@
 namespace sw
 {
 
-    class AScriptFact : public AManager<Component>
+    class AScriptFact
+        :   public AManager<Component>
     {
         public:
             using AManager<Component>::AManager;
             ~AScriptFact() override = default;
             void onUpdate() override { m_scene.eventManager().drop("Update"); };
-            [[nodiscard]] std::string type()const override { return ("ScriptManager"); };
+            [[nodiscard]] std::string type() const override { return ("ScriptManager"); }
     };
 
 }

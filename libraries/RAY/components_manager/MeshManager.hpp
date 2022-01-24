@@ -11,12 +11,13 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Mesh.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
     class Mesh;
 
-    class MeshManager : public sw::AManager<Mesh>
+    class RAY_GRAPH_MODULE_EXPORT MeshManager : public sw::AManager<Mesh>
     {
         public:
             using sw::AManager<Mesh>::AManager;

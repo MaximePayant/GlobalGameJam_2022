@@ -11,10 +11,11 @@
 
 #include "SW/Manager.hpp"
 #include "../components/Text.hpp"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class TextManager : public sw::AManager<Text>
+    class RAY_GRAPH_MODULE_EXPORT TextManager : public sw::AManager<Text>
     {
         public:
             using sw::AManager<Text>::AManager;

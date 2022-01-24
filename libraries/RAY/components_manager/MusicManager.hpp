@@ -10,14 +10,17 @@
 #define __RAYLIB_MODULE_MUSIC_MANAGER_HPP__
 
 #include "SW/Manager.hpp"
+
+#include "../RayLibModule_Config.hpp"
 #include "../components/Music.hpp"
 
 namespace ray
 {
-    class MusicManager : public sw::AManager<MusicStream>
+    class RAY_GRAPH_MODULE_EXPORT MusicManager : public sw::AManager<MusicStream>
     {
         public:
             using AManager<MusicStream>::AManager;
+            ~MusicManager() override = default;
 
             void onUpdate() override;
             [[nodiscard]] std::string type() const override;

@@ -9,8 +9,10 @@
 #ifndef __RAYLIB_MODULE_MUSIC_HPP__
 #define __RAYLIB_MODULE_MUSIC_HPP__
 
-#include "RAYLIB/raylib.h"
 #include "SW/Component.hpp"
+
+#include "RAYLIB/raylib.h"
+
 #include "../RayLibModule_Config.hpp"
 #include "../resources/Music.hpp"
 
@@ -32,6 +34,7 @@ namespace ray
             /// \param entity
             ////////////////////////////////////////////////////////////////////////////
             explicit MusicStream(sw::Entity& entityRef);
+            ~MusicStream() override = default;
 
             ////////////////////////////////////////////////////////////////////////////
             /// \brief Play the audio you want with the specified name

@@ -11,12 +11,13 @@
 
 #include "SW/Component.hpp"
 #include "RAYLIB/raylib.h"
+
+#include "../RayLibModule_Config.hpp"
 #include "../utils/Vector3.hpp"
 
 namespace ray
 {
-    class RCamera :
-        public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT RCamera : public sw::Component
     {
         private:
             Camera m_camera;

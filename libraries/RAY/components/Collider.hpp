@@ -9,14 +9,15 @@
 #ifndef __RAYLIB_MODULE_COLLIDER_HPP__
 #define __RAYLIB_MODULE_COLLIDER_HPP__
 
-#include "RAYLIB/raylib.h"
-#include "SW/Component.hpp"
 #include <iostream>
 #include <memory>
+#include "SW/Component.hpp"
+#include "RAYLIB/raylib.h"
+#include "../RayLibModule_Config.hpp"
 
 namespace ray
 {
-    class Collider : public sw::Component
+    class RAY_GRAPH_MODULE_EXPORT Collider : public sw::Component
     {
         public:
             enum Type
@@ -43,7 +44,7 @@ namespace ray
 
     }; // class Collider
 
-    class CubeCollider :
+    class RAY_GRAPH_MODULE_EXPORT CubeCollider :
         public Collider
     {
 
@@ -72,7 +73,7 @@ namespace ray
 
     }; // class CubeCollider
 
-    class SphereCollider :
+    class RAY_GRAPH_MODULE_EXPORT SphereCollider :
         public Collider
     {
 
@@ -101,7 +102,7 @@ namespace ray
 
     }; // class BoxCollider
 
-    class RayCollider :
+    class RAY_GRAPH_MODULE_EXPORT RayCollider :
         public Collider
     {
 
